@@ -27,5 +27,4 @@ inicio
     escreva("Bem Vindo ", nome_aluno, " do turno da ", turno)
     escreval(" ")
 
-
 fimalgoritmo

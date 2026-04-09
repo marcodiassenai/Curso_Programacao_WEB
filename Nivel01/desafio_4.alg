@@ -13,7 +13,8 @@ var
 
 inicio
 
-    experiencia <- verdadeiro
+    //experiencia <- verdadeiro
+
     escreval("Digite seu nome")
     leia(nome)
     escreval("Qual a sua idade")
@@ -24,10 +25,10 @@ inicio
     leia(valor)
     escreval("Você possui experiencia?")
     leia(experiencia)
-        se (verdadeiro) entao
+        se (experiencia = "sim") entao
             escreval ("Voce esta empregado")
         senao
             escreval ("Tente outra coisa")
         fimse
-        
+
     fimalgoritmo
