@@ -1,1 +1,2 @@
-foi criado um programa do desafio 1, 
+foi criado um programa do desafio 1
+criando sozinho o desafio 2
