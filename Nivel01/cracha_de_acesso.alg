@@ -1,9 +1,8 @@
 algoritmo "Crachá de Acesso"
-// Disciplina  :  Linguagem e Lógica de Programação
+// Disciplina  : Linguagem e Lógica de Programação
 // Professor   : Ricardo
-// Descrição   : Desafio 01
 // Autor(a)    : Marco
-// Data atual  : ${DATA_ATUAL}/${MES_ATUAL}/${ANO_ATUAL}
+
 var
 
     nome_aluno: caractere

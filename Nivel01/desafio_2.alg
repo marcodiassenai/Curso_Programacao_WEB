@@ -1,25 +1,33 @@
-algoritmo "Desvio de Fluxo de Dados"
-// Disciplina  :  [Linguagem e Lógica de Programação]
+algoritmo "Desafio 2"
+// Disciplina  : Linguagem e Lógica de Programação
 // Professor   : Ricardo
-// Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Marco
-// Data atual  : ${DATA_ATUAL}/${MES_ATUAL}/${ANO_ATUAL}
-var
 
-    aluno:caractere
-    professor:caractere
-    reserva:caractere
+var
+    nome:caractere
+    idade:inteiro
+    email:caractere
+    valor:real
+    experiencia:logico
 
 inicio
 
-    escreval("Digite o nome do Aluno")
-    leia(aluno)
-    escreval("Digite o nome do Professor")
-    leia(professor)
-    aluno=reserva
-    professor=aluno
-    reserva=professor
-    escreval("O Aluno chama ", aluno, " Professor chama: ", professor)
-    
+    //experiencia <- verdadeiro
 
-fimalgoritmo
+    escreval("Digite seu nome")
+    leia(nome)
+    escreval("Qual a sua idade")
+    leia(idade)
+    escreval("Digite seu email")
+    leia(email)
+    escreval("Qual o valor da Bolsa Auxilio")
+    leia(valor)
+    escreval("Você possui experiencia?")
+    leia(experiencia)
+        se (experiencia = "sim") entao
+            escreval ("Voce esta empregado")
+        senao
+            escreval ("Tente outra coisa")
+        fimse
+
+    fimalgoritmo
