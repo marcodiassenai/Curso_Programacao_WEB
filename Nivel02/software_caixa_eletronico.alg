@@ -9,10 +9,7 @@ var
    
 inicio
 
-    //n100 <- valor \ 100
-    //n50 <- (valor % 100) \ 50
-    //n20 <- ((valor % 100) \ 50) \ 20
-    //n10 <- (((valor % 100) \ 50) \ 20) \ 10
+    //valor <- 477
     escreval("Digite o valor do saque: ")
     leia(valor)
     escreval("Notas de 100 = ", valor \ 100)
