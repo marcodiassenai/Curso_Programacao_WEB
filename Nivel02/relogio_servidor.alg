@@ -1,4 +1,4 @@
-algoritmo "Nome do Programa"
+algoritmo "Relogio do Servidor"
 // Disciplina  : Linguagem e Lógica de Programação
 // Professor   : Ricardo
 // Autor(a)    : Marco
@@ -11,6 +11,6 @@ inicio
 
     escreval("Ditite quantos segundos demorou: ")
     leia(segundos)
-    escreval("Durou ", (segundos \ 3600), " H ", ((segundos % 3600) /60))
+    escreval("Durou ", (segundos \ 3600), " H ", ((segundos % 3600) / 60))
 
 fimalgoritmo
