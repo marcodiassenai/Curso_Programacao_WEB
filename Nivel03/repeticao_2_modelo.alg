@@ -41,11 +41,19 @@ inicio
     tentativas <- tentativas + 1
 
         se(senhadigitada <> "1234") entao
-            escreval ("Senha incorreta. Tente novamente.")
+            se (tentativas <= 3) entao
+                escreval ("Senha incorreta. Tente novamente.")
+                escreval ("Restam ", 3 - tentativas, " tentativas")
+            fimse
         fimse
 
     //so agora no final ele faz o teste, assim que digitar a senha correta o programa para de rodar, ou até 3 tentativas
-    ate(senhadigitada = "1234") ou (tentativas = 3)
-    escreva("Login efetuado com sucesso")
+    ate(tentativas = 3) ou (senhadigitada = "1234")
+
+    se(senhadigitada = "1234") entao
+        escreva("Login efetuado com sucesso")
+    senao
+        escreval("ACESSO BLOQUEADO")
+    fimse
 
 fimalgoritmo
