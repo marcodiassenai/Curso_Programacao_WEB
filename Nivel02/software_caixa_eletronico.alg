@@ -3,7 +3,7 @@ algoritmo "O Software do Caixa Eletrônico"
 // Professor   : Ricardo
 // Autor(a)    : Marco
 
-var
+var 
 
    valor:real
    

@@ -3,7 +3,7 @@ algoritmo "Relogio do Servidor"
 // Professor   : Ricardo
 // Autor(a)    : Marco
 
-var
+var 
 
     segundos:inteiro
 
