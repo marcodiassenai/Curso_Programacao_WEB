@@ -1,0 +1,144 @@
+<!--declara que o ficheiro é um documento HTML-->
+<!DOCTYPE html>
+
+<!-- inicia o codigo HTML e define o idioma da pagina -->
+<html lang="pt-br">
+
+        <!--A tag <head> guarda as configurações invisíveis da página (metadados, título da pagina, autor, etc...) -->
+        <head>
+            <!-- Título que aparecerá na aba -->
+            <title> Teste para Programadores </title>
+
+            <!-- Define a codificação de caracteres (idioma do teclado)-->
+            <meta charset="UTF-8">
+
+            <!-- faz com que a pagina seja adaptavel ao dispositivo e telas mais usuais -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!--discrição do site e caracteristicas resumidas -->
+            <meta name="description" content="Teste para Programadores">
+
+            <!-- dados do autor do site-->
+            <meta name="author" content="Marco Dias">
+
+            <!-- função keywords serve para ajudar quando alguem for buscar nos site de pesquisa usanod palavras chaves -->
+            <meta name="keywords" content="aula, web, programação">
+           
+        <!-- Fechamento da tag obrigatorio -->
+        </head>
+
+        <!-- a tag <body> é o corpo da página. Tudo que fosera acrescenmtado sera visível-->
+        <body>
+            <!-- Cabeçalho da página -->
+            <header>
+               <!-- Como boas práticas no desemvolvimento de sites, recomenda-se 1 <h1> por aba -->
+               <h1> <u>Teste para Programadores</u> </h1> 
+                
+               <!-- Parágrafo -->
+               <p>Teste seus conhecimentos em programação e veja sua pontuação.</p> <hr>
+
+            </header>
+
+            <!-- Conteudo principal da página-->
+            <main>
+                <!-- Delimita partes especificas dentro do site -->
+                <section>
+                    <h2> <u><i>Sobre esse teste</i></u> </h2>
+                    <p> Esse teste foi desenvolvido para treinar seus conhecimentos em <strong>Programação</strong>: <br>Linguagem de Programação; Lógia de Programação; Conceitos Bacicos entre outros. <br>Você encontrará diferentes tipos de perguntas como: <small>multipla escolha</small>, texto, datas, imagens e etc... <br>Você também poderá encontrar alguns acrônimos como <abbr title="Hipertxt Markup Language (linguagem de marcação de hipertexto)"> HTML </abbr> e <abbr title="Cascading Style Sheets (Folhas estilo Cascata)"> CSS </abbr>, que são comummentes usados em questões relacionas a <em>Desenvolvimento WEB</em>. <br><br>Boa Sorte!!!! </p>
+                    
+                    <!-- Propriedades de parágrafos (textos)
+                     <strong> Mostra ao navegador onde precisa destacar o texto
+                     <em> Dá enfase no texto escolhido 
+                     <br> Quebra de linha no texto 
+                     <abbr> Cria uma abreviação explicativa ao passar o mouse 
+                     <b> Colocar texto em Negrito
+                     <i> Colocar texto em Itálico
+                     <u> Colocar texto em Sublinhado 
+                     <hr> Cria uma linha divisória 
+                     <small> Deixa o a palavra que esta entre <small> um pouco menor que o restante do texto
+                     <sup> Deixa a palavra que está entre o tag sobrescrita, tipo número expoente
+                     <sub> Deixa a palavra que está entre o tag ligeiramente menor e pra baixo ao contrato do tab sup -->
+
+                </section>
+
+                 <!-- INÍCIO DO TESTE - QUESTÃO 1 -->
+                 <section>
+                    <h2> QUESTÃO 1: Qual linguagem é usada para estrutura páginas na Web? </h2>
+
+                    <!-- A tag <form> é uma das mais importantes de qualquer sistema interativo da web pois trabalha como envelope que agrupa os campos de entrada (impunts) e define para onde e como os dados preenchidos serão enviados -->
+                    <form>
+                        <!-- Esta linha <input> representa o link com a lógica a ser implementada no Back End -->
+                        <input type="radio" value="Python" id="q1a" name="pergunta1">
+                        
+                        <!-- O nome descrito na tag name não é visivel para o usuário, sendo então necessario acrescentar uma linha com a tag <label> -->
+                        <label for="q1a"> Python </label> <br>
+
+                        <input type="radio" value="Java Script" id="q1b" name="pergunta1">
+                        <label for="q1b"> Java Script </label> <br>
+
+                        <input type="radio" value="C++" id="q1c" name="pergunta1">
+                        <label for="q1c"> C++ </label> <br>
+
+                        <input type="radio" value="HTML" id="q1d" name="pergunta1">
+                        <label for="q1a"> HTML </label> <br>
+
+                    </form> 
+
+                    </section> <hr>
+
+                    <!-- Questão 2: Texto -->
+                    <section>
+                        <h2> QUESTÃO 2: Na URL https://www.google.com, o trecho "google.com" é conhecido como </h2>
+
+                        <form>                         
+                            <!-- Linha do texto indicativo -->                                             
+                            <label for="p2"> Resposta:</label> <br>
+
+                            <!-- Esse input representa o "leia" do visualg, sendo que o "value" será o dado informado pelo usuário -->
+                            <input type="texto" id="p2" name="pergunta2" placeholder="Digite a resposta aqui">
+
+                        </form> 
+                        
+                    </section> <hr>
+
+                    <!-- Questão 3: Senhas-->
+                    <section>
+                        <h2> QUESTÃO 3: Escreva um exemplo de senha segura: </h2>
+
+                        <form>
+                            <input type="password" id="p3" placeholder="Digite a senha aqui">
+
+                        </form> 
+                    
+                    </section> <hr>
+
+                    </section> <hr>
+
+                    <!-- Questão 4: Data -->
+                     <section>
+                        <h2> QUESTÃO 4: Em quem ano foi criado o HTML  </h2>
+
+                        <form>
+                            <input type="date" id="p4" placeholder="Digite a senha aqui">
+
+                        </form> 
+                    
+                    </section> <hr>
+
+
+                    
+                                        
+                 </section>
+
+            </main>
+
+            <!-- Rodapé da página -->
+            <footer>
+
+            </footer>
+
+        <!-- Fechamento da tag obrigatório -->
+        </body>
+
+<!-- fechamento obrigatorio da pagina -->
+</html>
