@@ -210,6 +210,87 @@
                     </form>
 
                 </section> <hr>
+
+
+
+                <!-- Questão 9: Tabela de pontuação -->
+                <section>
+                    <h2> QUESTÃO 9: Tabela de Pontuação: </h2>
+
+                    <!-- Artificio utilizado em navegadores que não mostram a tabela apenas com a tag "table" -->
+                    <tbody>
+                        <!-- Monta uma estrutura de uma tabela -->                    
+                        <table border="1">
+
+                            <!-- tag "thead" é o cabeçalho da tabela-->
+                            <thead>
+                                <tr>
+                                    <th> Pontuação </th><th> Descrição </th>
+                                </tr>
+                            </thead>
+
+                                <!-- Mesmo significando "Table Row", pode causar uma dúvida em referencia "tradução row  (coluna), mas será habilitado a edição da linha" -->
+                                <tr>
+                                    <td> 0 - 2 </td><td> Não Foi bem, tente novamente </td>
+                                </tr>
+
+                                <tr>
+                                    <td> 3 - 4 </td><td> Precisa melhorar muito ainda </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td> 5 - 6 </td><td> Regular, mas não é o suficiente </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td> 7 - 8 </td><td> Muito bom, você esta aprendendo </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td> 9 - 10 </td><td> Parabéns Programador </td>
+                                </tr>
+
+                            <!-- tag "tfoot" é o rodapé da tabela-->
+                            <tfoot>
+                                <tr>
+                                    <!-- tag "colspan = 2", serve para mesclar a tabela, o numero entre aspas é a quantidade de colunas que vai mesclar-->
+                                    <th colspan="2"> Boa sorte na próxima </th>
+                                </tr>
+                            </tfoot>
+
+                        </table>
+                    </tbody>
+ 
+                </section> <hr>
+
+
+                <!-- Questão 10: Lista de respostas -->
+                <section>
+                    <h2> QUESTÃO 10: Verifique a sua resposta: </h2>
+
+                    <!-- Como na tabela para trabalharmos com lista, primeiramente precisamos informar a intenção atravez da tag "ul" 
+                     ul -- Habilita a lista
+                     ol -- Lista Numerada
+                     li -- Lista de pontos -->
+
+                    <!-- cria o dispositivo para clicar e aparecer as repostas abaixo -->
+                    <details>
+                        <summary> clique para visualizar a resposta </summary>
+                        <ul>
+                            <!-- colocando o tag "ol" para abrir a lista que tenha a tag "li", faz com que seja substituido os pontos por números -->
+                            <ol>
+                                <li> HTML </li>
+                                <li> Domínio </li>
+                                <li> Senha contendo Numeros, letras e simbolos </li>
+                                <li> 1991 </li>
+                                <li> Python, JavaScript e Java </li>
+                                <li> *.html </li>
+                                <li> Type </li>
+                                <li> Java </li>
+                            </ol>                        
+                        </ul> 
+                    </details>
+                </section> <hr>
                      
                      
 
