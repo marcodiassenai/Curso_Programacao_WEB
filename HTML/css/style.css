@@ -1,0 +1,37 @@
+/* importando fontes personalizadas do google fontes, mas pode ser de outros sites tambem */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Michroma&family=Unbounded:wght@200..900&display=swap');
+
+/* seletor de todo conteudo da página */
+* {
+
+    margin: 0.3rem;                  /* Espaçamento nas magens, "0.3rem" espaçamento das margens relativa a tela (tipo uma porcentagem da margem) */ 
+    padding: 0;                 /* Espaçamento interno */     
+    box-sizing: border-box;     /* Box padrão de todo o site */   
+}
+
+hr { display: none;}            /* Desabilita as tags hr que estão no index.html */
+
+
+
+/* seletor do corpo da página */
+body {
+
+    background-color: #36b136b0;    /* cor do fundo da pagina */
+    color: rgb(2, 41, 85);    /* cor das letras no site */
+
+    /*colocando os outros dados da fonte que esta na linha 2 desse arquivo */
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+         
+}
+
+header {
+    padding: 3rem;
+    border: #023502 ;
+    border-style: solid;
+    border-radius: 4rem;
+    border-width: 0.5rem;
+    
+    
+}
