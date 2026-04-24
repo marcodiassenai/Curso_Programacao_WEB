@@ -1,5 +1,6 @@
 /* importando fontes personalizadas do google fontes, mas pode ser de outros sites tambem */
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Michroma&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 
 /* seletor de todo conteudo da página */
 * {
@@ -10,7 +11,6 @@
 }
 
 hr { display: none;}            /* Desabilita as tags hr que estão no index.html */
-
 
 
 /* seletor do corpo da página */
@@ -26,12 +26,48 @@ body {
          
 }
 
+
 header {
     padding: 3rem;
     border: #023502 ;
     border-style: solid;
     border-radius: 4rem;
     border-width: 0.5rem;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
+}
+
+
+/* caso seja necessario atribuir propriedades em um elemento especifico dentre outros iguais, usasse identificadores ou classes (isso é quando coloca uma "class" no index.html para especificar um texto)*/
+p.par-header{
+    color: black;
+    /* esta puxando os dados da fonte que foram importadas e esta na linha 3 */
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+
+}
+
+
+main{
+    padding: 2rem;
+    font-size:medium;    
+    display: flex;  /* Alinhamento dos "filhos / tags subordinadas" em linha */    
+    flex-direction: column; /* Alinhamento dos "filho / tags subordinadas" em colunas */
+    gap: 3rem;  /* Define o espaçamento em cada uma das divisões */
+
+}
+
+
+p.introducao{
+    font-size: 1rem;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    justify-self: center;
+    background-color: rgb(4, 63, 2);
+    border-left: solid 1rem;
     
 }
