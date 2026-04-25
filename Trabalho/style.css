@@ -7,4 +7,11 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 /* O seletor ':root' representa a raiz do documento (o HTML inteiro).
 É o melhor lugar para criar "Variáveis CSS", guardando valores que vamos repetir muito.
 (MDN Reference: :root e --* (Custom properties)) */
-
+:root{
+    --bg-color: #36b136b0;  /* Variável para cor de fundo princiapl */
+    --card-br: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
+    --text-color: #0d0f7e;  /* Cor do texto claro */
+    --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
+    --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
+    --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
+}
