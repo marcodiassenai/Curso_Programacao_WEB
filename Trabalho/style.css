@@ -16,8 +16,23 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
     --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
 }
 
+
 /* O asterisco (*) é o Seletor Universal. Ele pega TODAS as tags da página de uma vez. Usado aqui para fazer o "Reset CSS", removendo margens que o navegador cria sozinho. [MDN Reference: Universal selectors (*), box-sizing] */
 *{ 
-    margin: 0;  /* Margens externas da página */
-    
+    margin: 0;  /* Margens externas do box */
+    padding: 0; /* Parte interna do box */
+
+    /* O border-box impede que bordas e paddings aumentem o tamanho total definido para a caixa. */
+    box-sizing: border-box;
 }
+
+
+/* Estilizando a tag <body> (O corpo visual da pagina) */
+body{
+    font-family: "Michroma", sans-serif; /* Aplica a fonte que importamos. 'sans-serif' é o plano B */
+    font-weight: 400;
+    font-style: normal; /* Estilo da fonte */
+
+    /*
+}
+
