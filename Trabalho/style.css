@@ -35,5 +35,6 @@ body{
 
     /* linear-gradient cria um fundo em degrade com várias cores inclinadas em 135 graus. 
     [MDN Referencia: linear-gradient] */
+    background: linear-gradient(135deg, var(--bg-color)m #1e1b4b, #2e1065, var(--bg-color));
 }
 
