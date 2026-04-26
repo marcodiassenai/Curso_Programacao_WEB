@@ -9,7 +9,7 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 [MDN Reference: :root e --* (Custom properties)] */
 :root{
     --bg-color: #36b136b0;  /* Variável para cor de fundo princiapl */
-    --card-br: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
+    --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
     --text-color: #0d0f7e;  /* Cor do texto claro */
     --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
     --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
@@ -19,8 +19,8 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 
 /* O asterisco (*) é o Seletor Universal. Ele pega TODAS as tags da página de uma vez. Usado aqui para fazer o "Reset CSS", removendo margens que o navegador cria sozinho. [MDN Reference: Universal selectors (*), box-sizing] */
 *{ 
-    margin: 0;  /* Margens externas do box */
-    padding: 0; /* Parte interna do box */
+    margin: 0.5rem;  /* Margens externas do box */
+    padding: 0rem; /* Parte interna do box */
 
     /* O border-box impede que bordas e paddings aumentem o tamanho total definido para a caixa. */
     box-sizing: border-box;
@@ -35,6 +35,94 @@ body{
 
     /* linear-gradient cria um fundo em degrade com várias cores inclinadas em 135 graus. 
     [MDN Referencia: linear-gradient] */
-    background: linear-gradient(135deg, var(--bg-color)m #1e1b4b, #2e1065, var(--bg-color));
+    background: linear-gradient(135deg, var(--bg-color) #1e1b4b, #2e1065, var(--bg-color));
+
+    /* Esticamos o fundo em 300% para que a animação tenha espaço para 'escorregar' */
+    background-size: 300% 300%;
+
+    /* Chama a animação chamada 'gradientBG', fazendo durar 15s de forma infinita.
+    [MDN Refence: animation] *] */
+    animation: gradientBG 15s ease infinite;
+
+    color: var(--text-color);  /* Puxando a cor da nossa variável CSS */
+    line-height: 1.6; /* Aumenta o espaço entre as linhas de texto para facilitar a leitura */
+    padding: 20px; /*Da um respiro nas bordas do site */
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela (Viewport Height) */  
+}
+
+
+
+/* @keyframes = cria a 'linha do tempo' de uma animação passo a passo.
+Aqui movemos a posição do fundo, criando o efeito visual do site estar mudando de cor.
+[MDN Reference: @keyframes, background-position] */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%}
+}
+
+
+/* Estilizando o cabeçalho do site */
+header {
+    text-align: center; /* Centraliza todo o texto interno */
+    padding: 40px 20 px; /* 40px em cima/baixo, 20px nas laterais */
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+
+    /* backdrop-filter é o truque para "Glassmorphism" (Efeito de Vidro Fosco).
+    Ele desfoca tudo o que estiver por tras deste elemento.
+    [MDN Reference: backdrop-filter] */
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px; /* Arredonda os cantos */
+    margin-bottom: 30px; /* Empurra o resto do site para baixo */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sompra projetada */
+}
+
+
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-size: 2.5rem;
+
+    /* Criando um texto com gradiente! Pintamos o fundo e dizemos para preencher apenas o texto.
+    [MDN Reference: background-clip, text-fill-color] */
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+} 
+
+
+
+/* Esconde as tags de linha (<hr>), pois já construímos a separação visual usando margens no CSS.
+[MDN Reference: display] */
+hr {display: none;}
+
+
+
+/* Estilizando as seções (As "caixas" das perguntas) */
+section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    margin: 20px auto; /* 'auto' nas laterais centraliza a caixa perfeitamente na tela */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px; /* Impede que a caixa estique infinitamente em monitores ultrawide */
+    border: 1px sollid var(--border-color);
+
+    /* Efeito Neon: Multiplas camadas de brilho. Você pode adicionar várias sombras separadas por vírgula.
+    [MDN Reference: box-shadow] */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+    /* Dispara a animação 'fadeUp'. O 'forwards' manda a caixa parar no quadro final da animação. */
+    animation: fadeup 0.8s ease-out forwards;
+}
+
+
+
+/* Keyframe para as sections surgirem do nada (opacidade 0) e de baixo para cima (trasnlateY). */
+@keyframes fadeup {
+    
 }
 
