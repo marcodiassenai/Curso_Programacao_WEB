@@ -1,3 +1,7 @@
+/* =================================================================================================================================== 
+ARQUIVO DE ESTILO CSS - GUIA DIDATICO 
+===================================================================================================================================== */
+
 /* Importando uma fonte externa do Google Fonts.
 isso permite usar tipografias modernas que não vêm instaladas no PC do usuário.
 (MDN Reference: @import) - procure no MDN para ver ocmo importar folhas de estilo.*/
@@ -123,6 +127,147 @@ section {
 
 /* Keyframe para as sections surgirem do nada (opacidade 0) e de baixo para cima (trasnlateY). */
 @keyframes fadeup {
-    
+    0% {
+        opacity: 0; /* Totalmente invisível */
+        transform: translateY(40px); /* 40px empurrado para baixo*/
+    }
+    100% {
+        opacity: 1; /* Totalmente visível */
+        transform: translateY(0); /* Retorna à posição original */
+    }
 }
 
+
+
+/* Efeito de Esponja (Squish / Bounce). usa scaleX e Y para esticar e achatar como uma borracha. 
+[MDN Reference: transform, scale()] */
+@keyframes sponge {
+    0 {transform: translateY(0) scale(1);}
+    30 {transform: translateY(0) scaleX(1.02) scaleY(0.96);}
+    50 {transform: translateY(0) scaleX(0.98) scaleY(1.02);}
+    70 {transform: translateY(0) scaleX(1.01) scaleY(0.99);}
+    100 {transform: translateY(0) scale(1);}
+}
+
+
+
+/* A pseudo-classe: hover ativa os estilos apenas quando o cursor do mouse está por cima.
+[MDN Reference: :hover*/
+section: hover {
+    animation: sponge 0.5s ease-out:
+}
+
+
+
+/* Agrupamento de formulários */
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    /* Transition cria a suavidade na mudança de estado (ex: ao passar o mouse depois)
+    MDN Reference: transition] */
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: var(--primary); /* Acende a borda com nossa cor azul */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); /* Acende a sombra neon */
+}
+
+/* Legenda presa a borda do fieldset */
+legend {
+    border-color: var(--bg-color);
+    color: var(--primary);
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+
+
+/* Estilização de múltiplos inputs ao mesmo tempo. Separamos por virgula.
+[MDN Reference: Attribute selectors (ex: [type="text")]) */
+/* Foi a mudanças das caixas que podem ser preenchidas*/
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], select, textarea {
+    width: 100%; /* Força a ocupar a linha toda */
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif , sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+} 
+
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* mudança dos quadros da questão 5*/
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: var(--primary);
+}
+
+
+
+/* ================================================================================================================================= 
+AULA: ALINHAMENTO DE IMAGENS E MOLDURAS
+================================================================================================================================== */
+
+figure {
+    /* display: flex transforma a figura num container poderoso para alinhar coisas.
+    MDN Reference: CSS Flexible Box Layout (Flexbox)] */
+    display: flex;
+    flex-direction: column /* Empilha os filhos (imagem e legenda) um em cima do outro */;
+    align-items: center; /* Centraliza no eixo cruzado (meio horizontal) */
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)); /* Fundo em gradiente suave */
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+
+/* Legenda da imagem que esta na figura da Questão 8 */
+figcaption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Cor um pouco mais suave que o branco puro */
+    font-size: italic   ;
+}
+
+
+/* Botões */
+button {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para uma 'mãozinha' indicando que é clicável */
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.02); /* Botão cresce 2% quando passamos o mouse */;
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4); /* Proteja um neon por baixo */
+}
+
+
+
+/* ====================================================================================================================================
+AULA: TABELAS MODERNAS (EFEITO ZEBRA, HOVER E GLASSMORPHISM
+===================================================================================================================================== */
