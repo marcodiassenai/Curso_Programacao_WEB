@@ -269,5 +269,51 @@ button:hover {
 
 
 /* ====================================================================================================================================
-AULA: TABELAS MODERNAS (EFEITO ZEBRA, HOVER E GLASSMORPHISM
+AULA: TABELAS MODERNAS (EFEITO ZEBRA, HOVER E GLASSMORPHISM)
 ===================================================================================================================================== */
+/* Alterações da questão 9 */
+table {
+    width: 100;
+    /* border-collapse junta as bordas das células para formar uma linha só.
+    [MDN Reference: border-collapse] */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(15, 23, 42, 0.6); /* Fundo escuro com efeito vidro */
+    border-radius: 12px;
+    /* O overflow escondido corta tudo que sair do limite arredondado do fundo */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+
+/* Dados gerais da tabela e cabeçalhos */
+th, td {
+    padding: 18px 15px; /* Mais espaço interno (respiro) para a tabela não parecer apaertada*/
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória bem sutil */
+    transition: all 0.3s ease; /* Prepara para animações suaves */
+}
+
+
+/* Cabeçalhos em destaque */
+th {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.6), rgba(139, 92, 246, 0.3)); /* Gradiente na linha do título */ 
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6); /* Brilho neon no cabeçalho */
+}
+
+
+
+/* Pseudo-classe :nth-child(). Seleciona elementos com base em uma formula matematica!
+Aqui 
+"even" = pinta as linhas pares. 
+"odd" = pintaria as impares.
+Exce3lente para c4riar efeito Zebra.
+[MDN Reference: nth-child] */
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
