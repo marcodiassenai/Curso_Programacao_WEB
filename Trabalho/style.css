@@ -12,9 +12,9 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 É o melhor lugar para criar "Variáveis CSS", guardando valores que vamos repetir muito.
 [MDN Reference: :root e --* (Custom properties)] */
 :root{
-    --bg-color: #36b136b0;  /* Variável para cor de fundo princiapl */
+    --bg-color: #0f172a;  /* Variável para cor de fundo princiapl */
     --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
-    --text-color: #0d0f7e;  /* Cor do texto claro */
+    --text-color: #000000;  /* Cor do texto claro */
     --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
     --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
     --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
@@ -23,8 +23,8 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 
 /* O asterisco (*) é o Seletor Universal. Ele pega TODAS as tags da página de uma vez. Usado aqui para fazer o "Reset CSS", removendo margens que o navegador cria sozinho. [MDN Reference: Universal selectors (*), box-sizing] */
 *{ 
-    margin: 0.5rem;  /* Margens externas do box */
-    padding: 0rem; /* Parte interna do box */
+    margin: 0;  /* Margens externas do box */
+    padding: 0; /* Parte interna do box */
 
     /* O border-box impede que bordas e paddings aumentem o tamanho total definido para a caixa. */
     box-sizing: border-box;
@@ -176,7 +176,7 @@ fieldset:hover {
 
 /* Legenda presa a borda do fieldset */
 legend {
-    border-color: var(--bg-color);
+    background: var(--bg-color);
     color: var(--primary);
     padding: 5px 20px;
     border-radius: 20px;
@@ -298,7 +298,7 @@ th, td {
 
 /* Cabeçalhos em destaque */
 th {
-    background: linear-gradient(90deg, rgba(59, 130, 246, 0.6), rgba(139, 92, 246, 0.3)); /* Gradiente na linha do título */ 
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3)); /* Gradiente na linha do título */ 
     color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -312,7 +312,7 @@ th {
 Aqui 
 "even" = pinta as linhas pares. 
 "odd" = pintaria as impares.
-Exce3lente para c4riar efeito Zebra.
+Excelente para criar efeito Zebra.
 [MDN Reference: nth-child] */
 tbody tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.02);
@@ -321,7 +321,7 @@ tbody tr:nth-child(even) {
 
 /* Destaca a linha inteira da tabela ao colocar o mouse */
 tbody tr:hover {
-    background-color: rgba(59, 130, 246, 0.15);
+    background-color: rgba(59, 130, 246, 0.15); /* Fundo azul translucido */
 }
 
 
@@ -334,13 +334,13 @@ tbody tr:hover td {
 
 
 /* Configurando o rodapé especifico da tabela */
-tfoot td {
-    text-align: center;
+tfoot th {
+    text-align: center; /* Alinhamento do texto */
     font-weight: 800;
     color: var(--accent); /* Usa a cor roxa (accent) do nosso tema */
     background: rgba(15, 23, 42, 0.9);
     border-bottom: none;
-    text-transform: uppercase;
+    text-transform: uppercase; /* texto passa para maiuscula */
 }
 
 
