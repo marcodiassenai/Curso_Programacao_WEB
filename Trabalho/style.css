@@ -14,7 +14,7 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 :root{
     --bg-color: #0f172a;  /* Variável para cor de fundo princiapl */
     --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
-    --text-color: #000000;  /* Cor do texto claro */
+    --text-color: #f8fafc;  /* Cor do texto claro */
     --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
     --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
     --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
@@ -39,7 +39,7 @@ body{
 
     /* linear-gradient cria um fundo em degrade com várias cores inclinadas em 135 graus. 
     [MDN Referencia: linear-gradient] */
-    background: linear-gradient(135deg, var(--bg-color) #1e1b4b, #2e1065, var(--bg-color));
+    background: linear-gradient(135deg, var(--bg-color), #1e1b4b, #2e1065, var(--bg-color));
 
     /* Esticamos o fundo em 300% para que a animação tenha espaço para 'escorregar' */
     background-size: 300% 300%;
