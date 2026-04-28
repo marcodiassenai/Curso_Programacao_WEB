@@ -12,7 +12,7 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 É o melhor lugar para criar "Variáveis CSS", guardando valores que vamos repetir muito.
 [MDN Reference: :root e --* (Custom properties)] */
 :root{
-    --bg-color: #0f172a;  /* Variável para cor de fundo princiapl */
+    --bg-color: #202a0f;  /* Variável para cor de fundo princiapl */
     --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
     --text-color: #f8fafc;  /* Cor do texto claro */
     --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
@@ -37,16 +37,21 @@ body{
     font-weight: 400;
     font-style: normal; /* Estilo da fonte */
 
+
+    /*Modificação */
+    background-image: url("https://www.senairs.org.br/sites/default/files/senai.png");
+    background-repeat: repeat-x;                              
+
     /* linear-gradient cria um fundo em degrade com várias cores inclinadas em 135 graus. 
-    [MDN Referencia: linear-gradient] */
-    background: linear-gradient(135deg, var(--bg-color), #1e1b4b, #2e1065, var(--bg-color));
+    [MDN Referencia: linear-gradient] 
+    background: linear-gradient(135deg, var(--bg-color), #1e1b4b, #2e1065, var(--bg-color)); */
 
     /* Esticamos o fundo em 300% para que a animação tenha espaço para 'escorregar' */
-    background-size: 300% 300%;
+    background-size: cover;
 
     /* Chama a animação chamada 'gradientBG', fazendo durar 15s de forma infinita.
     [MDN Refence: animation] *] */
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 25s ease infinite;
 
     color: var(--text-color);  /* Puxando a cor da nossa variável CSS */
     line-height: 1.6; /* Aumenta o espaço entre as linhas de texto para facilitar a leitura */
@@ -66,12 +71,13 @@ Aqui movemos a posição do fundo, criando o efeito visual do site estar mudando
 }
 
 
-/* Estilizando o cabeçalho do site */
+/* Estilizando o cabeçalho do site, onde esta escrito "Teste Interativo para Progamadores */
 header {
     text-align: center; /* Centraliza todo o texto interno */
     padding: 40px 20 px; /* 40px em cima/baixo, 20px nas laterais */
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
 
+   
     /* backdrop-filter é o truque para "Glassmorphism" (Efeito de Vidro Fosco).
     Ele desfoca tudo o que estiver por tras deste elemento.
     [MDN Reference: backdrop-filter] */
