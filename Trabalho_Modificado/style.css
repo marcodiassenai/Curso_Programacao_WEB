@@ -14,7 +14,7 @@ isso permite usar tipografias modernas que não vêm instaladas no PC do usuári
 :root{
     --bg-color: #202a0f;  /* Variável para cor de fundo princiapl */
     --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
-    --text-color: #f8fafc;  /* Cor do texto claro */
+    --text-color: #000000;  /* Cor do texto claro */
     --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
     --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
     --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
@@ -75,7 +75,7 @@ Aqui movemos a posição do fundo, criando o efeito visual do site estar mudando
 header {
     text-align: center; /* Centraliza todo o texto interno */
     padding: 40px 20 px; /* 40px em cima/baixo, 20px nas laterais */
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(138, 71, 8, 0.8) 0%, rgba(65, 68, 77, 0.9) 100%); /* Modifica as cores da Caixa principal do título */
 
    
     /* backdrop-filter é o truque para "Glassmorphism" (Efeito de Vidro Fosco).
@@ -97,7 +97,7 @@ h1 {
 
     /* Criando um texto com gradiente! Pintamos o fundo e dizemos para preencher apenas o texto.
     [MDN Reference: background-clip, text-fill-color] */
-    background: linear-gradient(to right, var(--primary), var(--accent));
+    background: linear-gradient(to right, #662608, #000000); /*Modifica o cabeçalho escrito "Texto Interativo para Pragramadores*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
