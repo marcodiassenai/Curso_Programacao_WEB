@@ -326,7 +326,7 @@
 
         <!-- PERGUNTA 11: FORMULARIO DE FEEDBAK-->
         <section>
-            <h2> 10 - Formulário de Feedbak </h2>
+            <h2> 11 - Formulário de Feedbak </h2>
 
             <form>
                 
@@ -343,7 +343,11 @@
                     <label for="name"> Comentários </label> <br>
 
                     <!-- A tag <textarea> permite a digitaçaõ de textos grandes / multiplas linhas. O atributo 'rows/cols' ajusta o tamanho inicial e o usuario pode redimensioná-lo. (MDN Referencia: <textarea>)-->
-                    <textarea type="text" id="comment" name="comentarios" rows="4" cols="50" placeholder="Digite seus comentários aqui..."></textarea>                 
+                    <textarea type="text" id="comment" name="comentarios" rows="4" cols="50" placeholder="Digite seus comentários aqui..."></textarea>
+                    
+                    <!-- Cria o botão de enviar abaixo do comentário -->
+                    <form action="/enviar_comentarios" method="post">
+                    <button class="glow-on-hover" type="button">Enviar</button>                
                    
                 </fieldset>
 
