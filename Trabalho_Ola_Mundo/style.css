@@ -27,8 +27,19 @@ h1 {
 }
 
 p {
+    color: rgb(204, 243, 189);
+    font-size: 1.4rem; /* muda o tamanho da fonte */
+    text-align: center; /* Centralizou o texto */
+}
+
+
+/* essa é a class que foi criada e sera trabalhada a parte */
+.saudacao {
     color: rgb(78, 100, 92);
-    font-size: 1rem; /* muda o tamanho da fonte */
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+    
 }
 
 
