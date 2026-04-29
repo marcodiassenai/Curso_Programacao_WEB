@@ -1,0 +1,16 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgba(1, 31, 31, 0.801);
+    padding: auto;
+    align-items: center;
+    display: flex;
+
+    /* Centralizando o texto na tela */
+    height: 100vh;
+    justify-content: center;
+  
+}
+
+
+
+    
