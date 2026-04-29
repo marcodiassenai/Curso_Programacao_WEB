@@ -12,5 +12,27 @@ body {
 }
 
 
+/* buscando a classe que esta no html, e nela cria a caixa 'box' com a cor diferente */
+.container1 {
+    align-items: center;
+    background-color: rgb(137, 173, 164);
+    padding: 1rem;
+    border-radius: 0px 45px;
+    border-style:inset; /* deixou a borda com uma linha em volta, parecendo alto relevo no box */
+    box-shadow: 0.7rem 0.7rem 0 #0a0a006e /* faz a sombra, os numero correspondem a possição que vai ficar a sombra */
+}
+
+h1 {
+    color: rgb(184, 87, 8);
+}
+
+p {
+    color: rgb(78, 100, 92);
+    font-size: 1rem; /* muda o tamanho da fonte */
+}
+
+
+
+
 
     
