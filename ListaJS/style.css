@@ -11,12 +11,14 @@ body {
 }
 
 .container {
+    text-align: center;
     /* buscando a classe que esta no html, e nela cria a caixa 'box' com a cor diferente */
     background-color: rgb(137, 173, 164);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0px 45px;
     border-style:inset; /* deixou a borda com uma linha em volta, parecendo alto relevo no box */
     box-shadow: 0.7rem 0.7rem 0 #0a0a006e /* faz a sombra, os numero correspondem a possição que vai ficar a sombra */
+    
        
 }
 
@@ -30,9 +32,9 @@ p {
 button {
     box-shadow: 0rem 0rem 0.5rem 0.2rem #ebeb1b73;
     border-radius: 10rem;
-    /*esse comando centralizou o botão */
+    /*esse comando centralizou o botão 
     display: block;
-    margin: auto;
+    margin: auto; */
 
 }
 
@@ -50,6 +52,12 @@ button {
     background-color: rgb(244, 247, 247);
     color: black;
 }
+
+input {    
+    /* aumentou o quadro */
+    width: 100%;
+}
+
 
 
 

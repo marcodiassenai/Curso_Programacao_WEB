@@ -3,9 +3,14 @@ function adicionarMensagem() {
     let input = document.getElementById("inputTarefa");
     let mensagem = input.value;
     // let mensagem = input.value
-    document.getElementById("mensagem").textContent = mensagem
-        
-    }
+    document.getElementById("mensagem").textContent = mensagem       
+}
+
+function removerTarefa() {
+    let input = document.getElementById("inputTarefa");
+    let mensagem = input.valeu;
+    document.getElementById("mensagem").textContent = ""
+}
     
 
 
