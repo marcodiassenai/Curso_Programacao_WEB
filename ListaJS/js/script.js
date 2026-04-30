@@ -9,7 +9,8 @@ function adicionarMensagem() {
 function removerTarefa() {
     let input = document.getElementById("inputTarefa");
     let mensagem = input.valeu;
-    document.getElementById("mensagem").textContent = ""
+    document.getElementById("mensagem").textContent = "";
+    document.getElementById("inputTarefa").value = "";
 }
     
 
