@@ -1,0 +1,56 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(3, 92, 87);
+    padding: auto;
+    align-items: center;
+    display: flex;
+
+    /* Centralizando o texto na tela */
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    /* buscando a classe que esta no html, e nela cria a caixa 'box' com a cor diferente */
+    background-color: rgb(137, 173, 164);
+    padding: 1rem;
+    border-radius: 0px 45px;
+    border-style:inset; /* deixou a borda com uma linha em volta, parecendo alto relevo no box */
+    box-shadow: 0.7rem 0.7rem 0 #0a0a006e /* faz a sombra, os numero correspondem a possição que vai ficar a sombra */
+       
+}
+
+p {
+    text-align: center;
+    color: aqua;
+    font-size: 1.5rem;
+   
+}
+
+button {
+    box-shadow: 0rem 0rem 0.5rem 0.2rem #ebeb1b73;
+    border-radius: 10rem;
+    /*esse comando centralizou o botão */
+    display: block;
+    margin: auto;
+
+}
+
+.botao {
+    color: blanchedalmond;
+    background-color: black;
+    justify-content: center;
+    width: 10rem;
+    align-content: center;
+    
+}
+
+/* Efeito para o botão mudar de cor quando passa o mouse por cima */
+.botao:hover {
+    background-color: rgb(244, 247, 247);
+    color: black;
+}
+
+
+
+
