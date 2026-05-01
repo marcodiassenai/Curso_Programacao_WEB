@@ -38,6 +38,7 @@ h1 {
 
 .contfilho { 
     display: flex;
+    padding: 1rem;
 }
 
 .label {
