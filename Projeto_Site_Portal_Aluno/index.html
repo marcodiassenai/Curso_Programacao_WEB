@@ -19,6 +19,12 @@
                 <input type="text" class="search-input" placeholder="Pesquise aqui...">
                 <button class="search-btn">🔍</button>
                 
+                <!-- dados para criar o envelope do email -->
+                <svg class="icon-email" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+
+                
             </div>
         </div>
         
@@ -35,6 +41,47 @@
         </div>
 
         <div class="cadastro">
+            <div class="grid">
+                <div class="colCadastro">
+                    <h3> Informações Básicas </h3>
+                    
+                    <label> Nome do Produtor </label>
+                    <label> Descrição Curta </label>
+                    <textarea name="descricao" id="descricao1"></textarea>
+
+                    <label> Categoria </label>
+                    <select name="categoria" id="categoria1">
+                        <option value="vestuario"> Vestuário </option>
+                        <option value="Eletronicos"> Eletrônicos </option>
+                        <option value="Alimentos"> Alimentos </option>                        
+                    </select>
+                </div>
+
+                <div class="colCadastro">
+                    <h3> Definição de Preço </h3>
+
+                    <label> Preço de Venda (R$) </label>
+                    <input id="precoVenda" type="number">
+
+                    <label> Preço de Custo (R$) </label>
+                    <input id="precoCusto" type="number">
+                </div>
+
+                <div class="colCadastro">
+                    <h3> Estoque e Midia </h3>
+
+                    <label> Quantidade em Estoque </label>
+                    <input id="estoque" type="number">
+
+                    <div class="upload"> Upload</div>
+                </div>
+
+            </div>
+
+            <div class="actions">
+                    <button class="primary"> Cadastrar Produtos </button>
+                    <button class="primary"> Limpar Formulário </button>
+            </div>
 
         </div>
         

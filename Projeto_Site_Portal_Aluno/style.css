@@ -3,13 +3,23 @@
         font-weight: 400;
         font-style: normal; */
 
+:root {
+    --verde-escuro: rgb(10, 117, 108); 
+    --verde-claro: rgb(38, 146, 137);
+    --verde-colunas: rgb(63, 196, 185);
+}
+
+body {
+    background: var(--verde-claro)
+}
 
      
 .cabecalho {
     display: grid;
     grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
-    /* border-bottom: 1px solid black; */   
+    /* border-bottom: 1px solid black; */ 
+    background: var(--verde-escuro);
 }
 
 .coluna1h {
@@ -17,8 +27,8 @@
 }
 
 .coluna2h {
-    margin-block: auto;
-    margin-left: 8rem;
+    margin-block: auto; /* margem travou no centro horizontalmente */
+    margin-left: 8rem; /* margem da esquerda */
 }
 
 .search-input {
@@ -58,3 +68,90 @@
 .textoMenu {
     text-align: center;
 }
+
+.search-btn {
+    position: relative;
+    bottom: 0.3rem;
+    left: 0.5rem;
+}
+
+/* Icone do email, foi criado no html pelo <svg> */
+.icon-email {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; /* Cor do ícone */
+    margin-block: auto;
+    margin-right: 2rem;
+    /* dos tags debaixo foram usados para movimentar o objeto dentro da tela */
+    position: relative;
+    left: 45%;
+}
+
+.cadastro {
+    max-width: 100%; /* ocupando o tamanho total do box dessa área */
+    margin: 40px 40px 40px 40px ;
+    background: var(--verde-colunas);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgb(8, 5, 0);
+    font-size: 20px;
+}
+
+/* grid = responsável pela divisão em 3 colunas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Definição das Colunas */
+.colCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-style:outset;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.input, textarea, select {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.textarea {
+    resize: none; /* redimencionamento automatico do quadro */
+    height: 60px;
+}
+
+.upload {
+    border: 2px dashed rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(19, 29, 168);
+    cursor: pointer;
+    width: 20%;
+    margin: auto;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+
+button.primary {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    width: 25%;
+    background-color: black;
+    color: beige;
+}
+
+
