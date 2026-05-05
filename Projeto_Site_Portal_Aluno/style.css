@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+    /* font-family: "Bungee Inline", sans-serif;
+        font-weight: 400;
+        font-style: normal; */
+
+
+     
+.cabecalho {
+    display: grid;
+    grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
+    gap: 10px;
+    /* border-bottom: 1px solid black; */   
+}
+
+.coluna1h {
+    text-align: center;
+}
+
+.coluna2h {
+    margin-block: auto;
+    margin-left: 8rem;
+}
+
+.search-input {
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:15px;
+    height:20px;
+    width:500px;
+
+}
+
+.header {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    border: 1px solid  black;
+    flex-direction: column;  
+} 
+
+.body {
+    display: grid;
+    grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
+    gap: 10px;
+    padding: 0.5rem; 
+    border: 1px solid black;
+}
+
+.menu {
+    height: 100rem; 
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.textoMenu {
+    text-align: center;
+}

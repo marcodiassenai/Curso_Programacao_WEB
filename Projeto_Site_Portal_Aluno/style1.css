@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+    /* font-family: "Bungee Inline", sans-serif;
+        font-weight: 400;
+        font-style: normal; */
+
+
+.coluna1h{
+    width: 15%;
+    border-right: 2px solid black;
+    height: 4rem; 
+    margin: 0;
+    text-align: center; 
+    flex-direction: column;          
+}
+
+.coluna2h{
+    width: 85%;
+    flex-direction: column;   
+}
+
+header {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    border-bottom: 1px solid  black;
+    flex-direction: column;      
+}
+
+.textoMenu {
+    text-align: center;      
+}
+
+.menu {
+    width: 15%;
+    border-right: 2px solid black;
+    height: 100rem; 
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+
+.cadastro {
+    width: 85%;
+}
+
+body {
+    display: fle;
+    padding: 0.5rem;    
+}
+
