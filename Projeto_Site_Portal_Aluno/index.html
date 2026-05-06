@@ -30,7 +30,7 @@
         
     </div>
 
-    <div class="body">
+    <div class="corpo">
         <div class="menu"> 
             <h3 class="textoMenu"> MENU </h3>
             <p> Início </p>
@@ -41,11 +41,19 @@
         </div>
 
         <div class="cadastro">
+            <div class="cadastroNovo">
+                <h1> Cadastro de Novo Produto - Passo a Passo </h1>
+                <h4>Olá, Aluno! Preencha as informações abaixo apara adicionar um produto </h4>
+            </div>
+
             <div class="grid">
                 <div class="colCadastro">
-                    <h3> Informações Básicas </h3>
+                    <h3><span class="numerostep">1</span> Informações Básicas </h3>
                     
+                    <br>
                     <label> Nome do Produtor </label>
+                    <input class="nomeProduto" type="text" /><span class="duvida">ℹ️</span>
+
                     <label> Descrição Curta </label>
                     <textarea name="descricao" id="descricao1"></textarea>
 
@@ -58,18 +66,24 @@
                 </div>
 
                 <div class="colCadastro">
-                    <h3> Definição de Preço </h3>
+                    <h3><span class="numerostep">2</span> Definição de Preço </h3>
 
+                    <br>
                     <label> Preço de Venda (R$) </label>
                     <input id="precoVenda" type="number">
+                    <small class="info">ℹ️ Adicione o preço de venda do produto </small>
+                    <br>
 
                     <label> Preço de Custo (R$) </label>
                     <input id="precoCusto" type="number">
+                    <small class="info">ℹ️ Adicione o preço de custo do produto </small>
                 </div>
+                
 
                 <div class="colCadastro">
-                    <h3> Estoque e Midia </h3>
+                    <h3><span class="numerostep">3</span> Estoque e Midia </h3>
 
+                    <br>
                     <label> Quantidade em Estoque </label>
                     <input id="estoque" type="number">
 

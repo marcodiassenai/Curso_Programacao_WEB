@@ -3,27 +3,40 @@
         font-weight: 400;
         font-style: normal; */
 
+        /* rgb(10, 117, 108); */
+
 :root {
     --verde-escuro: rgb(10, 117, 108); 
     --verde-claro: rgb(38, 146, 137);
     --verde-colunas: rgb(63, 196, 185);
 }
 
-body {
-    background: var(--verde-claro)
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-     
+body, html {
+    margin: ;
+    padding: 0;
+    height: 50%;
+    /* overflow: hidden; */ /* impede rolagem */
+}
+    
 .cabecalho {
     display: grid;
+    padding: 1.5rem;
     grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
     /* border-bottom: 1px solid black; */ 
-    background: var(--verde-escuro);
+    background: linear-gradient(rgb(46, 43, 43), rgb(10, 117, 108));
+    height: 50%;
 }
 
 .coluna1h {
     text-align: center;
+    margin: auto;
 }
 
 .coluna2h {
@@ -39,6 +52,7 @@ body {
     font-size:15px;
     height:20px;
     width:500px;
+    background-color: silver;
 
 }
 
@@ -50,16 +64,17 @@ body {
     flex-direction: column;  
 } 
 
-.body {
+.corpo {
     display: grid;
     grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
     padding: 0.5rem; 
     border: 1px solid black;
+    background: var(--verde-claro);
 }
 
 .menu {
-    height: 100rem; 
+    height: 50rem; 
     margin: 0;
     font-size: 1.5rem;
     line-height: 3rem;
@@ -87,6 +102,10 @@ body {
     left: 45%;
 }
 
+.cadastroNovo {
+    margin-bottom: 3%;
+}
+
 .cadastro {
     max-width: 100%; /* ocupando o tamanho total do box dessa área */
     margin: 40px 40px 40px 40px ;
@@ -102,17 +121,34 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin: auto;
 }
 
 /* Definição das Colunas */
 .colCadastro {
-    display: flex;
+    display:flex;
     flex-direction: column;
     gap: 10px;
     border-style:outset;
     border-radius: 20px;
-    padding: 2%;
+    padding: 6%;
+    background: silver;
 }
+
+.numerostep {
+    background: blue;
+    color: white;
+    border-radius: 100%;
+    padding: 3%;
+    position: relative;
+    right: 15%;
+    bottom: 30%;
+}
+
+h4 {
+    line-height: 2rem;
+}
+
 
 .input, textarea, select {
     padding: 10px;
@@ -123,22 +159,26 @@ body {
 
 .textarea {
     resize: none; /* redimencionamento automatico do quadro */
-    height: 60px;
+    height: 60%;
 }
 
 .upload {
-    border: 2px dashed rgb(0, 0, 0);
-    padding: 20px;
     text-align: center;
+    font: bold;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-block: auto;
+    border: 2px dashed rgb(0, 0, 0);
+    padding: 1rem;
     border-radius: 20px;
     color: rgb(19, 29, 168);
     cursor: pointer;
-    width: 20%;
-    margin: auto;
+    background: silver;
 }
 
 .actions {
-    margin-top: 20px;
+    margin-top: 3%;
     display: flex;
     gap: 10%;
     justify-content: center;
@@ -152,6 +192,10 @@ button.primary {
     width: 25%;
     background-color: black;
     color: beige;
+}
+
+h3 {
+    text-align: center;
 }
 
 
