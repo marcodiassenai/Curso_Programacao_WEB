@@ -11,6 +11,7 @@
     --verde-colunas: rgb(63, 196, 185);
 }
 
+/* borda da tela */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -177,6 +178,10 @@ h4 {
     background: silver;
 }
 
+.upload:hover {
+    transform: scale(1.10);
+}
+
 .actions {
     margin-top: 3%;
     display: flex;
@@ -194,8 +199,10 @@ button.primary {
     color: beige;
 }
 
+button.primary:hover {
+    transform: scale(1.10); /* Efeito do Botão */
+}
+
 h3 {
     text-align: center;
 }
-
-
