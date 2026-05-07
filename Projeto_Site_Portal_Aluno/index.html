@@ -13,8 +13,9 @@
     <div class="header">
         <div class="cabecalho">
             <div class="coluna1h"> 
-                <h4>PORTAL DO ALUNO </h4>
+                <h2>PORTAL DO ALUNO </h2>
             </div>
+
             <div class="coluna2h">
                 <input type="text" class="search-input" placeholder="Pesquise aqui...">
                 <button class="search-btn">🔍</button>
@@ -23,9 +24,18 @@
                 <svg class="icon-email" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-
-                
             </div>
+
+            <div class="coluna3h">
+                <div class="login-box">
+                <form>
+                    <input type="text" placeholder="Usuário" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+                </div>
+            </div>
+
         </div>
         
     </div>
@@ -33,11 +43,13 @@
     <div class="corpo">
         <div class="menu"> 
             <h3 class="textoMenu"> MENU </h3>
-            <p> Início </p>
-            <p> Cadastro de Produtos </p>
-            <p> Meus Produtos </p>
-            <p> Preços </p>
-            <p> Configurações </p>
+            <div class="indice">
+                <p> Início </p>
+                <p> Cadastro de Produtos </p>
+                <p> Meus Produtos </p>
+                <p> Preços </p>
+                <p> Configurações </p>
+            </div>    
         </div>
 
         <div class="cadastro">
@@ -51,13 +63,14 @@
                     <h3><span class="numerostep">1</span> Informações Básicas </h3>
                     
                     <br>
-                    <label> Nome do Produtor </label>
+                    <label id="textoProduto"> Nome do Produtor </label>
                     <input class="nomeProduto" type="text" /><span class="duvida">ℹ️</span>
 
-                    <label> Descrição Curta </label>
+                    <label> Descrição Curta </label> <br>
                     <textarea name="descricao" id="descricao1"></textarea>
-
-                    <label> Categoria </label>
+                    
+                    <br>    
+                    <label> Categoria </label> <br>
                     <select name="categoria" id="categoria1">
                         <option value="vestuario"> Vestuário </option>
                         <option value="Eletronicos"> Eletrônicos </option>
@@ -84,7 +97,7 @@
                     <h3><span class="numerostep">3</span> Estoque e Midia </h3>
 
                     <br>
-                    <label> Quantidade em Estoque </label>
+                    <label> Quantidade em Estoque </label><br>
                     <input id="estoque" type="number">
 
                     <div class="upload"> Upload</div>

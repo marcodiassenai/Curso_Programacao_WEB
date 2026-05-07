@@ -19,7 +19,6 @@
 }
 
 body, html {
-    margin: ;
     padding: 0;
     height: 50%;
     /* overflow: hidden; */ /* impede rolagem */
@@ -27,9 +26,10 @@ body, html {
     
 .cabecalho {
     display: grid;
-    padding: 1.5rem;
-    grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
+    padding: 2rem;
+    grid-template-columns: 15% 70% 15%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
+    gap: line;
     /* border-bottom: 1px solid black; */ 
     background: linear-gradient(rgb(46, 43, 43), rgb(10, 117, 108));
     height: 50%;
@@ -45,22 +45,39 @@ body, html {
     margin-left: 8rem; /* margem da esquerda */
 }
 
+.coluna3h {
+    position: relative;
+    margin-left: 0;
+    padding: 0;
+    max-width: 15%;
+    display:flex;
+    flex-direction:column;
+}
+
+h2{
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
 .search-input {
     float:left;
     background-color:transparent;
     padding-left:5px;
     font-style:italic;
     font-size:15px;
-    height:20px;
+    height:30px;
     width:500px;
     background-color: silver;
+}
 
+.search-btn {
+    position: relative;
+    bottom: 0.2rem;
+    left: 0.5rem;
 }
 
 .header {
-    font-family: "Bungee Inline", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
     border: 1px solid  black;
     flex-direction: column;  
 } 
@@ -78,17 +95,22 @@ body, html {
     height: 50rem; 
     margin: 0;
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 5rem;
 }
 
 .textoMenu {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
     text-align: center;
+    font-size: 2.5rem;
 }
 
-.search-btn {
-    position: relative;
-    bottom: 0.3rem;
-    left: 0.5rem;
+.indice {
+    margin-left: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: 3rem;
+    font: bold;
 }
 
 /* Icone do email, foi criado no html pelo <svg> */
@@ -100,7 +122,7 @@ body, html {
     margin-right: 2rem;
     /* dos tags debaixo foram usados para movimentar o objeto dentro da tela */
     position: relative;
-    left: 45%;
+    left: 47%;
 }
 
 .cadastroNovo {
@@ -127,13 +149,13 @@ body, html {
 
 /* Definição das Colunas */
 .colCadastro {
-    display:flex;
     flex-direction: column;
     gap: 10px;
     border-style:outset;
     border-radius: 20px;
-    padding: 6%;
+    padding: 2rem;
     background: silver;
+    line-height: 2.5rem;
 }
 
 .numerostep {
@@ -148,14 +170,33 @@ body, html {
 
 h4 {
     line-height: 2rem;
+    
 }
-
 
 .input, textarea, select {
     padding: 10px;
     border: 1px solid black;
     border-radius: 8px;
     font-size: 18px;
+    height: auto;
+}
+
+.nomeProduto {
+    width: 14rem;
+    height: 1.5rem;
+}
+#textoProduto {
+    top: 0%;
+}
+
+/* # antes do nome significa que é um id que estou trabalhando abaixo */
+#descricao1, #precoVenda, #precoCusto, #estoque {
+    width: 100%;
+    height: 1.5rem;
+}
+
+#categoria1 {
+    width: 100%;
 }
 
 .textarea {
@@ -163,19 +204,35 @@ h4 {
     height: 60%;
 }
 
+#descricao1 {
+    height: 25%;
+}
+
+/* texto das informações */
+.info { 
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 1rem;  
+}
+
+label {
+    position: relative;
+    top: 0.5rem;
+}
 .upload {
     text-align: center;
     font: bold;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-block: auto;
+    margin: 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 10px 1px;
     border: 2px dashed rgb(0, 0, 0);
-    padding: 1rem;
     border-radius: 20px;
     color: rgb(19, 29, 168);
     cursor: pointer;
     background: silver;
+    position: relative;
+    top: 3rem;
 }
 
 .upload:hover {
@@ -206,3 +263,5 @@ button.primary:hover {
 h3 {
     text-align: center;
 }
+
+
