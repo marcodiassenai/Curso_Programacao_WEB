@@ -27,6 +27,8 @@ function adicionarTarefa() {
 
     //cria novo item (li) e insere na (lista ul)
     let listaTarefas = document.getElementById("listaTarefas")
+
+    //"li" referece a lista, indica que a variavel novaTarefa vai receber uma lista
     let novaTarefa = document.createElement("li")
     novaTarefa.textContent = tarefa
     listaTarefas.appendChild(novaTarefa)
