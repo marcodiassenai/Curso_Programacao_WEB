@@ -1,9 +1,15 @@
+
+// a função do botão quando ele for clicado
 function adicionarTarefa() {
 
     //recebe valor do input do usuário
     //usar .trim() para remover espaços e testar se sobrou algum caractere
+    //value = para querer somente o comando que ta escrito dentro da caixa
+    //o let é para criar uma variável dentro do javascript, e nela colocar o valor que esta em inputTarefa
     let inputTarefa = document.getElementById("inputTarefa").value.trim();
     let tarefa = inputTarefa
+
+    //mostra o que ta sendo escrito //
     console.log(inputTarefa)
 
     // valida se está vazio
