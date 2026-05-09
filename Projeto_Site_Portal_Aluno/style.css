@@ -92,6 +92,8 @@ h2{
 }
 
 .menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
     height: 50rem; 
     margin: 0;
     font-size: 1.5rem;
@@ -105,6 +107,28 @@ h2{
     text-align: center;
     font-size: 2.5rem;
 }
+
+
+
+
+.textoLista {
+    color: black;
+    font-family: "Bungee Inline", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    text-align: center;
+}
+
+.menuLista {
+    margin-top: 1rem;
+    line-height: 2rem;
+    color: rgb(77, 243, 44);
+    font-size: 1rem;
+    
+}
+
+
+
 
 .indice {
     margin-left: 1rem;
@@ -258,6 +282,19 @@ button.primary {
 
 button.primary:hover {
     transform: scale(1.10); /* Efeito do Botão */
+}
+
+.msgCadastro {
+    position:relative;
+    left: 23rem;
+    color: rgb(218, 11, 11);
+    margin-top: 2rem;
+    text-shadow:
+        0 0 5px rgb(240, 243, 49),
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
 }
 
 h3 {

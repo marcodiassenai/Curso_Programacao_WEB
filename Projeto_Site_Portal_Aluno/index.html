@@ -49,7 +49,15 @@
                 <p> Meus Produtos </p>
                 <p> Preços </p>
                 <p> Configurações </p>
-            </div>    
+            </div>  
+            <hr> 
+
+            <div class="menuLista">
+                <p class="textoLista"> LISTA </p>
+                <p class="msgLista" id="msg_Lista"></p>
+
+                <li id="listaProduto"></li>
+            </div>
         </div>
 
         <div class="cadastro">
@@ -64,7 +72,10 @@
                     
                     <br>
                     <label id="textoProduto"> Nome do Produtor </label>
-                    <input class="nomeProduto" type="text" /><span class="duvida">ℹ️</span>
+                    
+                    <!-- input nomeProduto -->
+                    <input class="nomeProduto" id="nome_Produto" type="text">
+                    <span class="duvida">ℹ️</span>
 
                     <label> Descrição Curta </label> <br>
                     <textarea name="descricao" id="descricao1"></textarea>
@@ -106,9 +117,12 @@
             </div>
 
             <div class="actions">
-                    <button class="primary"> Cadastrar Produtos </button>
+                    <!-- função do botão da ação de CAdastrar produto -->
+                    <button onclick="adicionarTarefa()" class="primary"> Cadastrar Produtos </button>
                     <button class="primary"> Limpar Formulário </button>
             </div>
+
+            <p class="msgCadastro" id="msg_Cadastro"></p>
 
         </div>
         
