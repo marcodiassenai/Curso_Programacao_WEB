@@ -202,7 +202,7 @@ transform: scale(1.10);
     border-style:outset;
     border-radius: 20px;
     padding: 2rem;
-    background: rgb(129, 129, 129);
+    background: rgb(107, 106, 106);
     line-height: 2.5rem;
 }
 
@@ -283,6 +283,7 @@ label {
     background: rgb(129, 129, 129);
     position: relative;
     top: 3rem;
+    font-weight: bold;
 }
 
 .upload:hover {
@@ -313,14 +314,14 @@ button.primary:hover {
 .msgCadastro {
     position:relative;
     left: 23rem;
-    color: rgb(218, 11, 11);
+    color: rgb(255, 255, 255);
     margin-top: 2rem;
     text-shadow:
         0 0 5px rgb(240, 243, 49),
         0 0 10px #0ff,
-        0 0 20px #0ff,
+        0 0 20px rgb(235, 238, 64),
         0 0 40px #0ff,
-        0 0 80px #0ff;
+        0 0 80px rgb(250, 246, 7);
 }
 
 h3 {
