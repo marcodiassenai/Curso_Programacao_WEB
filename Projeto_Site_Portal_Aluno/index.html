@@ -13,7 +13,7 @@
     <div class="header">
         <div class="cabecalho">
             <div class="coluna1h"> 
-                <h2>PORTAL DO ALUNO </h2>
+                <h2> Portal do Aluno </h2>
             </div>
 
             <div class="coluna2h">
@@ -44,12 +44,12 @@
         <div class="menu"> 
             <h3 class="textoMenu"> MENU </h3>
             <div class="indice">
-                <p> Início </p>
-                <p> Cadastro de Produtos </p>
-                <p> Meus Produtos </p>
-                <p> Preços </p>
-                <p> Configurações </p>
-            </div>  
+                <button onclick="botaoInicio()" id="botao_Inicio"> Inicio </button> <br>
+                <button onclick="cadastroProduto()" id="cadastro_Produto"> Cadastro de Produto </button> <br>
+                <button onclick="meusprodutos()" id="meus_produtos"> Meus Produtos </button> <br>
+                <button onclick="botaopreco()" id="botao_preco"> Preço </button> <br>
+                <button onclick="botaoConfiguracoes()" id="botao_Configuracoes"> Configurações </button> <br>
+              </div>  
             <hr> 
 
             <div class="menuLista">
@@ -110,6 +110,9 @@
                     <br>
                     <label> Quantidade em Estoque </label><br>
                     <input id="estoque" type="number">
+
+                    <label> Data de Validade </label>
+                    <input type="date" id="data_Validade" name="dataValidade">
 
                     <div class="upload"> Upload</div>
                 </div>

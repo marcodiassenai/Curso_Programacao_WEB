@@ -3,12 +3,19 @@
         font-weight: 400;
         font-style: normal; */
 
-        /* rgb(10, 117, 108); */
-
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Petit+Formal+Script&display=swap');
+    /* font-family: "Arizonia", cursive;
+        font-weight: 400;
+        font-style: normal; */
+       
 :root {
-    --verde-escuro: rgb(10, 117, 108); 
+    /* --verde-escuro: rgb(10, 117, 108); 
     --verde-claro: rgb(38, 146, 137);
-    --verde-colunas: rgb(63, 196, 185);
+    --verde-colunas: rgb(63, 196, 185); */ 
+
+    --verde-escuro: rgb(109, 49, 9); 
+    --verde-claro: rgb(185, 86, 20); 
+    --verde-colunas: rgb(199, 91, 19); 
 }
 
 /* borda da tela */
@@ -20,7 +27,7 @@
 
 body, html {
     padding: 0;
-    height: 50%;
+    height: 100%;
     /* overflow: hidden; */ /* impede rolagem */
 }
     
@@ -29,10 +36,9 @@ body, html {
     padding: 2rem;
     grid-template-columns: 15% 70% 15%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
-    gap: line;
     /* border-bottom: 1px solid black; */ 
-    background: linear-gradient(rgb(46, 43, 43), rgb(10, 117, 108));
-    height: 50%;
+    background: linear-gradient(rgb(46, 43, 43), rgb(109, 49, 9));
+    
 }
 
 .coluna1h {
@@ -55,9 +61,9 @@ body, html {
 }
 
 h2{
-    font-family: "Bungee Inline", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
+    font-family: "Arizonia", cursive;
+    font-size: 3rem;
+    
 }
 
 .search-input {
@@ -91,6 +97,8 @@ h2{
     background: var(--verde-claro);
 }
 
+
+
 .menu {
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
@@ -101,31 +109,47 @@ h2{
 }
 
 .textoMenu {
-    font-family: "Bungee Inline", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-
-
-
-.textoLista {
-    color: black;
-    font-family: "Bungee Inline", sans-serif;
-    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
     font-style: normal;
     text-align: center;
+    text-decoration: underline;
+} 
+
+#botao_Inicio, #cadastro_Produto, #meus_produtos, #botao_preco, #botao_Configuracoes {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    text-align:left;
+    flex-direction:row;
+    font-weight:bold;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
 }
 
-.menuLista {
-    margin-top: 1rem;
-    line-height: 2rem;
-    color: rgb(77, 243, 44);
-    font-size: 1rem;
-    
+#botao_Inicio:hover, #cadastro_Produto:hover, #meus_produtos:hover, #botao_preco:hover, #botao_Configuracoes:hover {
+transform: scale(1.10);
 }
+
+
+.textoLista, .textoMenu {
+    color: rgb(0, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* modificações dos itens que são inseridos na Lista */
+#listaProduto {
+    color: rgb(25, 209, 8);
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+
 
 
 
@@ -178,7 +202,7 @@ h2{
     border-style:outset;
     border-radius: 20px;
     padding: 2rem;
-    background: silver;
+    background: rgb(129, 129, 129);
     line-height: 2.5rem;
 }
 
@@ -241,8 +265,10 @@ h4 {
 
 label {
     position: relative;
-    top: 0.5rem;
+    top: 0.2rem;
 }
+
+
 .upload {
     text-align: center;
     font: bold;
@@ -254,7 +280,7 @@ label {
     border-radius: 20px;
     color: rgb(19, 29, 168);
     cursor: pointer;
-    background: silver;
+    background: rgb(129, 129, 129);
     position: relative;
     top: 3rem;
 }
