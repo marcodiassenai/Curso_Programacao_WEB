@@ -21,4 +21,4 @@ function adicionarTarefa() {
     document.getElementById("msgCadastro").textContent = mensagem
     produto.value = ""
 
-}
+} 
