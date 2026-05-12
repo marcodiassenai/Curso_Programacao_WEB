@@ -33,7 +33,7 @@ body, html {
     
 .cabecalho {
     display: grid;
-    padding: 2rem;
+    padding: 0.5rem;
     grid-template-columns: 15% 70% 15%; /* Cria duas colunas de tamanhos iguais */
     gap: 10px;
     /* border-bottom: 1px solid black; */ 
@@ -54,8 +54,8 @@ body, html {
 .coluna3h {
     position: relative;
     margin-left: 0;
-    padding: 0;
-    max-width: 15%;
+    max-width: 70%;
+    justify-content: center;
     display:flex;
     flex-direction:column;
 }
@@ -149,11 +149,6 @@ transform: scale(1.10);
     line-height: 2rem;
 }
 
-
-
-
-
-
 .indice {
     margin-left: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -172,6 +167,8 @@ transform: scale(1.10);
     position: relative;
     left: 47%;
 }
+
+
 
 .cadastroNovo {
     margin-bottom: 3%;
