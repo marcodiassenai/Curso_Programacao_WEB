@@ -45,3 +45,9 @@ function limparFormulario() {
         console.log(limpar)
 
 }
+
+
+//Começar a criar as funções dos botões do box menu
+function meusprodutos() {
+    window.open("./produtos.html", "_black");
+}
