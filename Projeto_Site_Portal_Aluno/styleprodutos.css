@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+}
+
+.textoCabecalho {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+//corpo da pagina
+body {
+    padding: 0;
+    height: 100%;
+}
+
+.tabelaCategoria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-style: solid;
+}
+
+.menuTabela {
+    text-align: center;
+    text-decoration:underline;
+}
+
+.colunasTabela {
+    border-style: inset;
+}
