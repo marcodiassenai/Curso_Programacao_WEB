@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastas de Arquivo</title>
+    <link rel="stylesheet" href=".\teste.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="abas">
+        <div class="aba ativa" onclick="trocarAba('todos', this)">
+            📂 Todos
+        </div>
+
+        <div class="aba" onclick="trocarAba('vestuario', this)">
+            👕 Vestuário
+        </div>
+
+        <div class="aba" onclick="trocarAba('eletronico', this)">
+            💻 Eletrônico
+        </div>
+
+        <div class="aba" onclick="trocarAba('alimentos', this)">
+            🍎 Alimentos
+        </div>
+    </div>
+
+    <div class="conteudo" id="conteudo">
+
+        <div id="todos">
+            <h2>Todos os produtos</h2>
+            <p>Aqui aparecerão todos os itens.</p>
+        </div>
+
+    </div>
+
+</div>
+
+    <script src=".\teste.js"></script> 
+
+</body>
+</html>

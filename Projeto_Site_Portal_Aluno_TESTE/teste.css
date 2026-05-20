@@ -1,0 +1,49 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.container{
+    width:800px;
+}
+
+.abas{
+    /* displey:flex faz com que as abas ficam dispostas uma do lado da outra */
+    display:flex;
+    gap:5px;
+}
+
+/* forma que as abas ficam quando não estão sendo clicadas */
+.aba{
+    padding:12px 25px;
+    background:#c7c7c7;
+    border-radius:10px 10px 0 0;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    border:1px solid #999;
+}
+
+/* faz movimentar a aba um pouco para cima */
+.aba:hover{
+    transform:translateY(-3px);
+}
+
+/* mudar a cor da aba quando ela esta clicada */
+.ativa{
+    background:white;
+    border-bottom:1px solid white;
+}
+
+/* cor do quadro das abas */
+.conteudo{
+    background:white;
+    border:1px solid #999;
+    padding:30px;
+    min-height:250px;
+    border-radius:0 10px 10px 10px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
