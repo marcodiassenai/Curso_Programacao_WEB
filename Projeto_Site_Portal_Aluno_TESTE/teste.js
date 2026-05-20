@@ -1,3 +1,6 @@
+// (tipo, elemento) são parametros que a função ira receber, 
+// tipo recebe os escritos dentro dos parenteses que estão acompanhados de 'this'
+// elemento recebe toda a função que esta dentro do div do botão
 function trocarAba(tipo, elemento){
 
     //remove classe ativa
@@ -7,11 +10,13 @@ function trocarAba(tipo, elemento){
     //ativa clicada
     elemento.classList.add("ativa");
 
-    let conteudo=document.getElementById("conteudo");
+    //criou uma variavel 'conteudo' que vai receber o que tem em conteudo do arquivo html
+    let conteudo = document.getElementById("conteudo");
 
-    if(tipo=="todos"){
+    //
+    if(tipo == "todos"){
         conteudo.innerHTML=`
-        <h2>Todos os produtos</h2>
+        <h3>Todos os produtos</h3>
         <p>📂 Lista completa dos produtos.</p>
         `;
     }
