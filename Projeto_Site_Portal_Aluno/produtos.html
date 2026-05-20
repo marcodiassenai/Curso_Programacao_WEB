@@ -18,22 +18,28 @@
     <div class="tabelaCategoria">
         <div class="colunasTabela">
             <div class="vestuario">
-                <h2 class="menuTabela"> Vestuário </h2>
+                <button onclick="mostrarProdutoV()" class="mostrar_produto"> Vestuário </button>
+                <ul id="listaProdutoV"></ul>
             </div>
         </div>  
 
         <div class="colunasTabela">
             <div class="eletronicos">
-                <h2 class="menuTabela"> Eletronicos </h2>
+                <button onclick="mostrarProdutoE()" class="mostrar_produto"> Eletronicos </button>
+                <ul id="listaProdutoE"></ul>
             </div>
         </div>  
 
         <div class="colunasTabela">
             <div class="alimentos">
-                <h2 class="menuTabela"> Alimentos </h2>
+                <button onclick="mostrarProdutoA()" class="mostrar_produto"> Alimentos </button>
+                <ul id="listaProdutoA"></ul>
             </div>
-        </div>  
+        </div> 
+        
 
     </div>
+
+    <script src=".\js\produtos.js"></script> 
 
 </body>

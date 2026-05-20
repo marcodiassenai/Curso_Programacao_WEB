@@ -17,13 +17,16 @@
             </div>
 
             <div class="coluna2h">
-                <input type="text" class="search-input" placeholder="Pesquise aqui...">
-                <button class="search-btn">🔍</button>
+                <input type="text" id="search_input" placeholder="Pesquise aqui...">
+                <button onclick="botao_pesquisa()" class="search-btn" > 🔍 </button>
                 
                 <!-- dados para criar o envelope do email -->
-                <svg class="icon-email" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
+                <button onclick="botaoemail()" id="botao_email"> 
+                    <svg class="icon-email" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </button>
+                
             </div>
 
             <div class="coluna3h">
@@ -44,11 +47,11 @@
         <div class="menu"> 
             <h3 class="textoMenu"> MENU </h3>
             <div class="indice">
-                <button onclick="botaoInicio()" id="botao_Inicio"> Inicio </button> <br>
-                <button onclick="cadastroProduto()" id="cadastro_Produto"> Cadastro de Produto </button> <br>
-                <button onclick="meusprodutos()" id="meus_produtos"> Meus Produtos </button> <br>
-                <button onclick="botaopreco()" id="botao_preco"> Preço </button> <br>
-                <button onclick="botaoConfiguracoes()" id="botao_Configuracoes"> Configurações </button> <br>
+                <button onclick="botaoInicio()" id="botao_Inicio"> 🏠 Inicio </button> <br>
+                <button onclick="cadastroProduto()" id="cadastro_Produto"> 📦 Cadastro de Produto </button> <br>
+                <button onclick="meusprodutos()" id="meus_produtos"> 🛒 Meus Produtos </button> <br>
+                <button onclick="botaopreco()" id="botao_preco"> 💰 Preço </button> <br>
+                <button onclick="botaoConfiguracoes()" id="botao_Configuracoes"> ⚙️  Configurações </button> <br>
               </div>  
             <hr> 
 

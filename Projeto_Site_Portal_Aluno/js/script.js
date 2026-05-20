@@ -1,5 +1,5 @@
 // Vai dar função ao botão 'Cadastrar Produto)
-function adicionarTarefa() {
+/* function adicionarTarefa() {
 
     //criei uma variavel 'nomeProdutoVar' que vai pegar o valor digitado site Nome do Prduto
     let produto = document.getElementById("nome_Produto").value.trim()
@@ -33,7 +33,7 @@ function adicionarTarefa() {
     let mensagem = "Produto adicionado a Lista"
     document.getElementById("msgCadastro").textContent = mensagem
 
-}
+} */
 
 
 //função usada para limpar a lista que havia sido criada
@@ -48,6 +48,57 @@ function limparFormulario() {
 
 
 //Começar a criar as funções dos botões do box menu
+//função window.open faz abrir uma nova aba
 function meusprodutos() {
     window.open("./produtos.html", "_black");
+}
+
+
+function botaoemail() {
+    window.location.href = "mailto:marcodiassenai@gmail.com";
+}
+
+function botao_pesquisa() {
+    let pesquisa = document.getElementById("search_input").value.trim();
+
+    //verifica se está vazio
+    if(pesquisa === "") {
+        alert("Digite para pesquisar")
+        return;
+    }
+
+    window.open("https://www.google.com/search?q=" + encodeURIComponent(pesquisa), "_blank");
+
+    document.getElementById("search_input").value = "";
+  
+}
+
+function adicionarTarefa(){
+
+    let produto = document.getElementById("nome_Produto").value.trim();
+    let categoria = document.getElementById("categoria1").value;
+
+    // Verifica categoria
+    if(categoria === ""){
+        alert("Selecione uma categoria!");
+        return;
+    }
+
+    // Verifica nome
+    if(produto === ""){
+        alert("Digite um produto!");
+        return;
+    }
+
+    // Junta produto e categoria
+    let dados = produto + " - " + categoria;
+
+    // Salva no localStorage
+    localStorage.setItem("produtoSalvo", dados);
+
+    alert("Produto salvo!");
+
+    // Limpa os campos
+    document.getElementById("nomeProduto").value = "";
+    document.getElementById("categoria").value = "";
 }

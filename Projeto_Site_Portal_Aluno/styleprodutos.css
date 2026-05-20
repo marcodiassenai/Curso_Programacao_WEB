@@ -15,7 +15,7 @@ header {
 }
 
 
-//corpo da pagina
+/* corpo da pagina */
 body {
     padding: 0;
     height: 100%;
@@ -24,7 +24,7 @@ body {
 .tabelaCategoria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 30px;
     border-style: solid;
 }
 
@@ -35,4 +35,11 @@ body {
 
 .colunasTabela {
     border-style: inset;
+    height: 700px;
+}
+
+.mostrar_produto {
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 15rem;
 }
