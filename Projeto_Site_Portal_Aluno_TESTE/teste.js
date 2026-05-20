@@ -17,28 +17,28 @@ function trocarAba(tipo, elemento){
     if(tipo == "todos"){
         conteudo.innerHTML=`
         <h3>Todos os produtos</h3>
-        <p>📂 Lista completa dos produtos.</p>
+        <p>📂</p>
         `;
     }
 
     if(tipo=="vestuario"){
         conteudo.innerHTML=`
         <h2>Vestuário</h2>
-        <p>👕 Camisas, calças, tênis...</p>
+        <p>👕</p>
         `;
     }
 
     if(tipo=="eletronico"){
         conteudo.innerHTML=`
         <h2>Eletrônicos</h2>
-        <p>💻 Notebook, celular, TV...</p>
+        <p>💻</p>
         `;
     }
 
     if(tipo=="alimentos"){
         conteudo.innerHTML=`
         <h2>Alimentos</h2>
-        <p>🍎 Frutas, bebidas, comidas...</p>
+        <p>🍎</p>
         `;
     }
 
