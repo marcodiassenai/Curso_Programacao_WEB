@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="game-header">
+        <div class="status-box">❤️ Vidas: <span id="contadorVidas" style="color:#bb86fc">7</span></div>
+        <div class="mission-title">Teste Técnico: Resolução de Bugs 🐛</div>
+        <div class="status-box">⏱️ Tempo: <span id="cronometro" style="color:#03dac6">50:00</span></div>
+    </header>
+
+    <div class="split-layout">
+
+        <div class="left-panel">
+            <div class="container">
+                <h1>Meus Lembretes</h1>
+                <p>O que você precisa fazer hoje?</p>
+
+                <div class="form-group">
+                    <input type="text" id="entradaTexto" placeholder="Ex: Comprar pão e leite...">
+
+                    <button id="btnAdicionar" onclick="acionarTeste()">Adicionar</button>
+                </div>
+
+                <p id="alertaSistema"></p>
+                <ol id="painelDeItens"></ol>
+            </div>
+        </div>
+
+
+        <div class="right-panel">
+            <div class="editor-header">📝 script.js (Com Defeito)</div>
+            <textarea id="editorCodigo" spellcheck="false"></textarea>
+            <button class="btn-testar" onclick="acionarTeste()">Executar Código e Testar Interface</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

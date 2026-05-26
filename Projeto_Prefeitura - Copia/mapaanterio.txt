@@ -1,0 +1,103 @@
+
+/* MAPA */
+
+const map = L.map('map').setView(
+[-21.1356,-44.2617],14
+);
+
+/* MAPA CLARO PREMIUM */
+
+L.tileLayer(
+'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
+{
+    attribution:'© Stadia Maps © OpenStreetMap'
+}).addTo(map);
+
+/* PROBLEMAS EXEMPLO */
+
+const problems = [
+
+{
+coords:[-21.1362,-44.2558],
+text:"Buraco na Via"
+},
+
+{
+coords:[-21.1312,-44.2665],
+text:"Faixa Apagada"
+},
+
+{
+coords:[-21.1404,-44.2602],
+text:"Acúmulo de Lixo"
+}
+
+];
+
+/* MARCADORES */
+
+problems.forEach(problem => {
+
+L.marker(problem.coords)
+
+.addTo(map)
+
+.bindPopup(`
+
+<strong>${problem.text}</strong>
+
+<br><br>
+
+Protocolo: SJDR-2026
+
+`);
+
+});
+
+/* MODAL */
+
+const modal =
+document.getElementById("modal");
+
+document
+.getElementById("openModal")
+.onclick = () => {
+
+modal.style.display = "flex";
+
+};
+
+document
+.getElementById("closeModal")
+.onclick = () => {
+
+modal.style.display = "none";
+
+};
+
+/* CLIQUE MAPA */
+
+map.on("click",(e)=>{
+
+modal.style.display = "flex";
+
+console.log(
+e.latlng.lat,
+e.latlng.lng
+);
+
+});
+
+/* ENVIAR */
+
+document
+.getElementById("sendProblem")
+.onclick = ()=>{
+
+alert(
+"Ocorrência enviada com sucesso!\n\nProtocolo: SJDR-2026-001"
+);
+
+modal.style.display = "none";
+
+};
