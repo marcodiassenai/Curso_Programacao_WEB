@@ -306,3 +306,22 @@ box-shadow:
 
 }
 
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Alinha o início da barra exatamente no canto esquerdo da tela */
+    width: 100%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    border-top: 1px solid #817f7f;
+    padding: 5px;    
+    z-index: 9999; /* Garante que ela fique por cima da sidebar e do conteúdo */
+}

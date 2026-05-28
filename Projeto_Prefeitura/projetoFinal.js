@@ -83,7 +83,7 @@ text:"Acúmulo de Lixo"
 
 {
 coords:[-21.1254, -44.2392],
-text:"Homem precisando trabalhar"
+text:"Perigo na via"
 }
 
 ];
