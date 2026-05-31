@@ -1,3 +1,9 @@
 {
-  "usuarios": []
+  "usuarios": [
+    {
+      "nome": "daniel",
+      "email": "daniel@gmail",
+      "senha": "daniel"
+    }
+  ]
 }
