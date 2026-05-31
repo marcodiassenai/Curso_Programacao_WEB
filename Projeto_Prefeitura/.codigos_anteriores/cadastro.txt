@@ -1,0 +1,57 @@
+document.getElementById('form-cadastro').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Impede o recarregamento padrão da página
+
+    // Captura os elementos da tela
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const btnEnviar = document.getElementById('btn-enviar');
+    const btnText = document.getElementById('btn-text');
+    const feedback = document.getElementById('mensagem-feedback');
+
+    // Configuração do JSON Server (Altere a URL e a porta se necessário)
+    const URL_SERVIDOR = 'http://localhost:3000/usuarios';
+
+    // Monta o objeto com os dados digitados
+    const dadosUsuario = {
+        nome: nome,
+        email: email,
+        senha: senha
+    };
+
+    // Efeito visual de carregamento no botão
+    btnEnviar.disabled = true;
+    btnText.innerText = "Cadastrando...";
+
+    try {
+        // Envia os dados para o JSON Server via método POST
+        const resposta = await fetch(URL_SERVIDOR, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosUsuario)
+        });
+
+        if (resposta.ok) {
+            // Sucesso no cadastro
+            feedback.className = "sucesso";
+            feedback.innerText = "Cadastro realizado com sucesso!";
+            
+            // Limpa o formulário
+            document.getElementById('form-cadastro').reset();
+        } else {
+            // Resposta do servidor veio com erro
+            throw new Error();
+        }
+
+    } catch (error) {
+        // Trata falhas de rede ou servidor fora do ar
+        feedback.className = "erro";
+        feedback.innerText = "Erro ao conectar com o servidor. Tente mais tarde.";
+    } finally {
+        // Restaura o botão ao estado original
+        btnEnviar.disabled = false;
+        btnText.innerText = "Enviar Cadastro";
+    }
+});

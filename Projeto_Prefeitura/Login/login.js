@@ -33,3 +33,8 @@ function fazerLogin(event){
     }
 
 }
+
+document.getElementById("botao_Cadastro")
+.addEventListener("click", function() {
+    window.location.href = "../Cadastro/cadastro.html";
+});
