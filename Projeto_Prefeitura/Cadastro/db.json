@@ -1,9 +1,29 @@
 {
   "usuarios": [
     {
+      "nome": "marco",
+      "email": "teste@teste.com",
+      "senha": "1234",
+      "id": "m0Tf3W3i6lM"
+    },
+    {
+      "nome": "luciano",
+      "email": "teste@teste.com",
+      "senha": "12",
+      "id": "HuhBWja2OG8"
+    },
+    {
       "nome": "daniel",
-      "email": "daniel@gmail",
-      "senha": "daniel"
+      "email": "teste@casa.com.br",
+      "senha": "12345",
+      "id": "lArkA2nk6Fo"
+    },
+    {
+      "nome": "ricardo",
+      "email": "teste@teste.com",
+      "senha": "1",
+      "id": "aQNCS9V9a7s"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

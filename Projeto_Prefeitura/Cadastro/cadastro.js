@@ -1,5 +1,7 @@
 document.getElementById('form-cadastro').addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+    
+
+    event.preventDefault(); // Evita que a página recarregue
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
