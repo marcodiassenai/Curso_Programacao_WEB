@@ -43,10 +43,10 @@ var mapa = L.map('map', {
     zoomControl: false,
     maxBounds: limitesSJDR,
     maxBoundsViscosity: 1.0
-}).setView([-21.1356, -44.2617], 16);
+}).setView([-21.1356, -44.2617], 17);
 
 mapa.setMinZoom(13);
-mapa.setMaxZoom(18);
+mapa.setMaxZoom(18.4);
 
 // zoom no lado direito
 L.control.zoom({

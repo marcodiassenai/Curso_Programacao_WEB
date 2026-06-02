@@ -341,8 +341,8 @@ body{
 }
 
 .notification{
-
-    width:50px;
+    
+    width:60px;
     height:50px;
 
     border-radius:18px;
@@ -352,14 +352,32 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    padding-left: 1rem;
 
     color:#475569;
 
-    font-size:18px;
+    font-size:25px;
 
     box-shadow:
     0 10px 25px rgba(0,0,0,0.05);
 
+}
+
+/* Estilo do balãozinho (badge) de notificações */
+.notification-badge {
+    position: relative;
+    top: -11px;      /* Ajusta a posição vertical */
+    right: 10px;    /* Ajusta a posição horizontal */
+    background-color: #ff3b30; /* Vermelho padrão de notificação */
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%; /* Torna o balão redondo */
+    min-width: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .avatar{
@@ -990,3 +1008,7 @@ body{
     padding: 5px;    
     z-index: 9999; /* Garante que ela fique por cima da sidebar e do conteúdo */
 }
+
+
+
+
