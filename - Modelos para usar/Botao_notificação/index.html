@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ícone de Notificação</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Estilo para o container do botão de notificação */
+        .notification-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Estilo para o ícone do sino */
+        .notification-container .fa-bell {
+            font-size: 30px;
+            color: #333; /* Cor do sino */
+            transition: color 0.3s;
+        }
+
+        /* Efeito de hover (passar o mouse) apenas para dar um toque legal */
+        .notification-container:hover .fa-bell {
+            color: #555;
+        }
+
+        /* Estilo do balãozinho (badge) de notificações */
+        .notification-badge {
+            position: absolute;
+            top: -5px;      /* Ajusta a posição vertical */
+            right: -5px;    /* Ajusta a posição horizontal */
+            background-color: #ff3b30; /* Vermelho padrão de notificação */
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%; /* Torna o balão redondo */
+            min-width: 12px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification-container">
+        <i class="fa-solid fa-bell"></i>
+        <span class="notification-badge">3</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+    /* font-family: "Bungee Inline", sans-serif;
+        font-weight: 400;
+        font-style: normal; */
+
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Petit+Formal+Script&display=swap');
+    /* font-family: "Arizonia", cursive;
+        font-weight: 400;
+        font-style: normal; */
+       
+:root {
+    /* --verde-escuro: rgb(10, 117, 108); 
+    --verde-claro: rgb(38, 146, 137);
+    --verde-colunas: rgb(63, 196, 185); */ 
+
+    --verde-escuro: rgb(109, 49, 9); 
+    --verde-claro: rgb(185, 86, 20); 
+    --verde-colunas: rgb(199, 91, 19); 
+}
+
+/* borda da tela */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */ /* impede rolagem */
+}
+    
+.cabecalho {
+    display: grid;
+    padding: 0.5rem;
+    grid-template-columns: 15% 70% 15%; /* Cria duas colunas de tamanhos iguais */
+    gap: 10px;
+    /* border-bottom: 1px solid black; */ 
+    background: linear-gradient(rgb(46, 43, 43), rgb(109, 49, 9));
+    
+}
+
+.coluna1h {
+    text-align: center;
+    margin: auto;
+}
+
+.coluna2h {
+    margin-block: auto; /* margem travou no centro horizontalmente */
+    margin-left: 8rem; /* margem da esquerda */
+}
+
+.coluna3h {
+    position: relative;
+    margin-left: 0;
+    max-width: 70%;
+    justify-content: center;
+    display:flex;
+    flex-direction:column;
+}
+
+h2{
+    font-family: "Arizonia", cursive;
+    font-size: 3rem;
+    
+}
+
+#search_input {
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:15px;
+    height:30px;
+    width:500px;
+    background-color: silver;
+}
+
+.search-btn {
+    position: relative;
+    bottom: 0.2rem;
+    left: 0.5rem;
+}
+
+.header {
+    border: 1px solid  black;
+    flex-direction: column;  
+} 
+
+.corpo {
+    display: grid;
+    grid-template-columns: 15% 85%; /* Cria duas colunas de tamanhos iguais */
+    gap: 10px;
+    padding: 0.5rem; 
+    border: 1px solid black;
+    background: var(--verde-claro);
+}
+
+
+
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    height: 50rem; 
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 5rem;
+}
+
+.textoMenu {
+    color: rgb(0, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+} 
+
+#botao_Inicio, #cadastro_Produto, #meus_produtos, #botao_preco, #botao_Configuracoes {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    text-align:left;
+    flex-direction:row;
+    font-weight:bold;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+#botao_Inicio:hover, #cadastro_Produto:hover, #meus_produtos:hover, #botao_preco:hover, #botao_Configuracoes:hover {
+transform: scale(1.10);
+}
+
+
+.textoLista, .textoMenu {
+    color: rgb(0, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* modificações dos itens que são inseridos na Lista */
+#listaProduto {
+    color: rgb(25, 209, 8);
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.indice {
+    margin-left: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: 3rem;
+    font: bold;
+}
+
+/* Icone do email, foi criado no html pelo <svg> */
+#botao_email {
+    width: 30px;
+    height: 30px;
+    margin-block: auto;
+    margin-right: 2rem;
+    /* dos tags debaixo foram usados para movimentar o objeto dentro da tela */
+    position: relative;
+    left: 47%;
+}
+
+
+
+.cadastroNovo {
+    margin-bottom: 3%;
+}
+
+.cadastro {
+    max-width: 100%; /* ocupando o tamanho total do box dessa área */
+    margin: 40px 40px 40px 40px ;
+    background: var(--verde-colunas);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgb(8, 5, 0);
+    font-size: 20px;
+}
+
+/* grid = responsável pela divisão em 3 colunas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
+}
+
+/* Definição das Colunas */
+.colCadastro {
+    flex-direction: column;
+    gap: 10px;
+    border-style:outset;
+    border-radius: 20px;
+    padding: 2rem;
+    background: rgb(107, 106, 106);
+    line-height: 2.5rem;
+}
+
+.numerostep {
+    background: blue;
+    color: white;
+    border-radius: 100%;
+    padding: 3%;
+    position: relative;
+    right: 15%;
+    bottom: 30%;
+}
+
+h4 {
+    line-height: 2rem;
+    
+}
+
+.input, textarea, select {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    height: auto;
+}
+
+.nomeProduto {
+    width: 14rem;
+    height: 1.5rem;
+}
+#textoProduto {
+    top: 0%;
+}
+
+/* # antes do nome significa que é um id que estou trabalhando abaixo */
+#descricao1, #precoVenda, #precoCusto, #estoque {
+    width: 100%;
+    height: 1.5rem;
+}
+
+#categoria1 {
+    width: 100%;
+}
+
+.textarea {
+    resize: none; /* redimencionamento automatico do quadro */
+    height: 60%;
+}
+
+#descricao1 {
+    height: 25%;
+}
+
+/* texto das informações */
+.info { 
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 1rem;  
+}
+
+label {
+    position: relative;
+    top: 0.2rem;
+}
+
+
+.upload {
+    text-align: center;
+    font: bold;
+    margin: 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 10px 1px;
+    border: 2px dashed rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(19, 29, 168);
+    cursor: pointer;
+    background: rgb(129, 129, 129);
+    position: relative;
+    top: 3rem;
+    font-weight: bold;
+}
+
+.upload:hover {
+    transform: scale(1.10);
+}
+
+.actions {
+    margin-top: 3%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+
+button.primary {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    width: 25%;
+    background-color: black;
+    color: beige;
+}
+
+button.primary:hover {
+    transform: scale(1.10); /* Efeito do Botão */
+}
+
+.msgCadastro {
+    position:relative;
+    left: 23rem;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    text-shadow:
+        0 0 5px rgb(240, 243, 49),
+        0 0 10px #0ff,
+        0 0 20px rgb(235, 238, 64),
+        0 0 40px #0ff,
+        0 0 80px rgb(250, 246, 7);
+}
+
+h3 {
+    text-align: center;
+}

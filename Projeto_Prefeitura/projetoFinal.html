@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> S.O.S Cidadão </title>
+
+<!-- LEAFLET -->
+
+
+
+<!-- link do mapa original que veio no codigo -->
+<!--<link
+rel="stylesheet"
+ href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+/> -->
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+
+
+<!-- GOOGLE FONTS -->
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href=".\projetoFinal2.css">
+
+
+
+</head>
+ 
+
+
+<body>
+    
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img class="logo_Projeto" src=".\Imagens\Logo_Projeto.jpeg" alt="Logo">
+        </div>
+
+        <div class="menu">
+
+            <button class="active">
+                <i class="fa-solid fa-map"></i>
+                Mapa
+            </button>
+
+            <button>
+                <i class="fa-solid fa-file-lines"></i>
+                Protocolos
+            </button>
+
+            <button id="btnRelatorio">
+                <i class="fa-solid fa-chart-column"></i>
+                Relatórios
+            </button>
+
+            <button>
+                <i class="fa-solid fa-users"></i>
+                Usuários
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="title">
+
+                <div class="title-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <div>
+
+                    <h1>S.O.S Cidadão</h1>
+
+                    <p>
+                        Monitoramento Urbano • São João del Rei - MG
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                type="text"
+                placeholder="Buscar rua, bairro ou ocorrência">
+
+            </div>
+
+            <!-- USER -->
+
+            <div class="user">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-badge">7</span>
+                </div>
+
+                <div class="avatar">
+
+                    <div class="avatar-img">
+                        <svg width="40" height="40" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4" fill="black"/>
+                        <path d="M5 20c0-4 3-6 7-6s7 2 7 6" fill="black"/>
+                    </svg>
+                    </div>
+
+                    <div>
+
+                        <strong>Usuário</strong>
+
+                        <br>
+
+                        <small style="color:#64748b;">
+                            Administrador
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+        
+
+        <!-- MAPA -->
+
+        <div class="map-wrapper">
+
+            <div id="map"> </div>
+
+            <link
+                rel="stylesheet"
+                href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            />
+
+            
+
+            <!-- LEFT PANEL -->
+
+            <div class="left-panel">
+
+                <!-- REPORT -->
+
+                <div class="card report-card">
+
+                    <h2>
+                        Reportar Problema
+                    </h2>
+
+                    <p>
+
+                        Clique em qualquer ponto do mapa para registrar uma ocorrência urbana.
+
+                    </p>
+
+                    <button class="report-btn" id="openModal">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Novo Chamado
+
+                    </button>
+
+                </div>
+
+                <!-- CATEGORIAS -->
+
+                <div class="card categories-card">
+
+                    <div class="categories-title">
+
+                        <h2>
+                            Categorias
+                        </h2>
+
+                        <p>
+                            Principais ocorrências urbanas
+                        </p>
+
+                    </div>
+
+                    <div class="categories">
+
+                        <div class="category">
+
+                            <div class="category-icon red">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Buraco na Via
+                                </span>
+
+                                <small>
+                                    Problemas no asfalto
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                        <div class="category">
+
+                            <div class="category-icon orange">
+                                <i class="fa-solid fa-person-walking"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Buraco na Calçada
+                                </span>
+
+                                <small>
+                                    Passeio danificado
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                        <div class="category">
+
+                            <div class="category-icon yellow">
+                                <i class="fa-solid fa-signs-post"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Placa Danificada
+                                </span>
+
+                                <small>
+                                    Sinalização comprometida
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                        <div class="category">
+
+                            <div class="category-icon blue">
+                                <i class="fa-solid fa-road-circle-check"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Faixa Apagada
+                                </span>
+
+                                <small>
+                                    Pintura desgastada
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                        <div class="category">
+
+                            <div class="category-icon purple">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Iluminação Pública
+                                </span>
+
+                                <small>
+                                    Postes ou luzes apagadas
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                        <div class="category">
+
+                            <div class="category-icon green">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+
+                            <div class="category-info">
+
+                                <span>
+                                    Acúmulo de Lixo
+                                </span>
+
+                                <small>
+                                    Limpeza urbana
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STATUS -->
+
+            <div class="card status-card">
+
+                <h2>
+                    Status das Ocorrências
+                </h2>
+
+                <div class="status-grid">
+
+                    <div class="status-item">
+
+                        <div class="status-left">
+
+                            <div class="status-dot dot-yellow"></div>
+
+                            <span>
+                                Em análise
+                            </span>
+
+                        </div>
+
+                        <div class="status-number">
+                            12
+                        </div>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <div class="status-left">
+
+                            <div class="status-dot dot-green"></div>
+
+                            <span>
+                                Resolvidos
+                            </span>
+
+                        </div>
+
+                        <div class="status-number">
+                            37
+                        </div>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <div class="status-left">
+
+                            <div class="status-dot dot-red"></div>
+
+                            <span>
+                                Prioridade Alta
+                            </span>
+
+                        </div>
+
+                        <div class="status-number">
+                            8
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+       
+
+    </div>
+
+</div>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2>
+            Novo Problema
+        </h2>
+
+        <div class="form-group">
+
+            <label>
+                Tipo do problema
+            </label>
+
+            <select>
+
+                <option>Buraco na Via</option>
+                <option>Buraco na Calçada</option>
+                <option>Placa Danificada</option>
+                <option>Faixa Apagada</option>
+                <option>Iluminação Pública</option>
+                <option>Acúmulo de Lixo</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+                Descrição
+            </label>
+
+            <textarea
+            placeholder="Descreva o problema..."></textarea>
+
+        </div>
+
+        <div class="actions">
+
+            <button class="cancel-btn" id="closeModal">
+                Cancelar
+            </button>
+
+            <button class="send-btn" id="sendProblem">
+                Enviar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- rodape da pagina -->
+    <footer class="rodape">
+        © 2026 DML - Developers. Todos os direitos reservados.
+    </footer>
+
+
+
+<!-- LEAFLET -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src=".\projetoFinal.js"></script>
+
+
+
+</body>
+
+</html>
