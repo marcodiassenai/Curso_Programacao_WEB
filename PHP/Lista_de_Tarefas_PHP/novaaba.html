@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Aba</title>
+    <link rel="stylesheet" href=".\style.css"> <!-- Conecta a página a um arquivo de estilos (CSS) para deixar o visual bonito -->
+</head>
+
+<body> <!-- Tudo que está dentro do <body> é o que o usuário realmente vai ver e interagir na tela -->
+    
+    <!-- Uma 'div' é como se fosse uma caixa invisível usada para agrupar e organizar os elementos -->
+    <div class="container">
+        
+        <h1>Lista de Tarefas</h1>
+        
+        <div>
+            <!-- Mensagem que vai aparecer quando digitar -->
+            <p id="mensagem"></p>
+        </div>
+        
+        <button onclick="criartarefa()"> criar tarefa </button>
+        
+        
+        <ul id="listaTarefasNova"></ul>
+        
+    </div>
+
+    <!-- A tag <script> serve para conectar o nosso arquivo de códigos e lógicas (JavaScript) com esta estrutura (HTML). 
+         Colocamos no final do <body> para garantir que toda a parte visual (HTML) seja carregada ANTES do JavaScript tentar interagir com ela. -->
+    <script src=".\js\novaaba.js"></script>  
+</body>
+
+
+
+</html>

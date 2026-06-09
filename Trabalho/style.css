@@ -1,0 +1,403 @@
+/* =================================================================================================================================== 
+ARQUIVO DE ESTILO CSS - GUIA DIDATICO 
+===================================================================================================================================== */
+
+/* Importando uma fonte externa do Google Fonts.
+isso permite usar tipografias modernas que não vêm instaladas no PC do usuário.
+(MDN Reference: @import) - procure no MDN para ver ocmo importar folhas de estilo.*/
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+
+/* O seletor ':root' representa a raiz do documento (o HTML inteiro).
+É o melhor lugar para criar "Variáveis CSS", guardando valores que vamos repetir muito.
+[MDN Reference: :root e --* (Custom properties)] */
+:root{
+    --bg-color: #0f172a;  /* Variável para cor de fundo princiapl */
+    --card-bg: rgba (30, 41, 59, 0.7); /* Fundo com transparencia (canal Alpha do rgba) para efeito vidro */
+    --text-color: #f8fafc;  /* Cor do texto claro */
+    --primary: #3b82f6; /* Cor azul vibrante (Nossa cor primária) */
+    --accent: #8b5cf6; /* Cor roxo (Nossa cor de destaque) */
+    --border-color: rgba(255, 255, 255, 0.1); /* Borda branca com apenas 10% de visibilidade */     
+}
+
+
+/* O asterisco (*) é o Seletor Universal. Ele pega TODAS as tags da página de uma vez. Usado aqui para fazer o "Reset CSS", removendo margens que o navegador cria sozinho. [MDN Reference: Universal selectors (*), box-sizing] */
+*{ 
+    margin: 0;  /* Margens externas do box */
+    padding: 0; /* Parte interna do box */
+
+    /* O border-box impede que bordas e paddings aumentem o tamanho total definido para a caixa. */
+    box-sizing: border-box;
+}
+
+
+/* Estilizando a tag <body> (O corpo visual da pagina) */
+body{
+    font-family: "Michroma", sans-serif; /* Aplica a fonte que importamos. 'sans-serif' é o plano B */
+    font-weight: 400;
+    font-style: normal; /* Estilo da fonte */
+
+    /* linear-gradient cria um fundo em degrade com várias cores inclinadas em 135 graus. 
+    [MDN Referencia: linear-gradient] */
+    background: linear-gradient(135deg, var(--bg-color), #1e1b4b, #2e1065, var(--bg-color));
+
+    /* Esticamos o fundo em 300% para que a animação tenha espaço para 'escorregar' */
+    background-size: 300% 300%;
+
+    /* Chama a animação chamada 'gradientBG', fazendo durar 15s de forma infinita.
+    [MDN Refence: animation] *] */
+    animation: gradientBG 15s ease infinite;
+
+    color: var(--text-color);  /* Puxando a cor da nossa variável CSS */
+    line-height: 1.6; /* Aumenta o espaço entre as linhas de texto para facilitar a leitura */
+    padding: 20px; /*Da um respiro nas bordas do site */
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela (Viewport Height) */  
+}
+
+
+
+/* @keyframes = cria a 'linha do tempo' de uma animação passo a passo.
+Aqui movemos a posição do fundo, criando o efeito visual do site estar mudando de cor.
+[MDN Reference: @keyframes, background-position] */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%}
+}
+
+
+/* Estilizando o cabeçalho do site */
+header {
+    text-align: center; /* Centraliza todo o texto interno */
+    padding: 40px 20 px; /* 40px em cima/baixo, 20px nas laterais */
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+
+    /* backdrop-filter é o truque para "Glassmorphism" (Efeito de Vidro Fosco).
+    Ele desfoca tudo o que estiver por tras deste elemento.
+    [MDN Reference: backdrop-filter] */
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px; /* Arredonda os cantos */
+    margin-bottom: 30px; /* Empurra o resto do site para baixo */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sompra projetada */
+}
+
+
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-size: 2.5rem;
+
+    /* Criando um texto com gradiente! Pintamos o fundo e dizemos para preencher apenas o texto.
+    [MDN Reference: background-clip, text-fill-color] */
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+} 
+
+
+
+/* Esconde as tags de linha (<hr>), pois já construímos a separação visual usando margens no CSS.
+[MDN Reference: display] */
+hr {display: none;}
+
+
+
+/* Estilizando as seções (As "caixas" das perguntas) */
+section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    margin: 20px auto; /* 'auto' nas laterais centraliza a caixa perfeitamente na tela */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px; /* Impede que a caixa estique infinitamente em monitores ultrawide */
+    border: 1px sollid var(--border-color);
+
+    /* Efeito Neon: Multiplas camadas de brilho. Você pode adicionar várias sombras separadas por vírgula.
+    [MDN Reference: box-shadow] */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+    /* Dispara a animação 'fadeUp'. O 'forwards' manda a caixa parar no quadro final da animação. */
+    animation: fadeup 0.8s ease-out forwards;
+}
+
+
+
+/* Keyframe para as sections surgirem do nada (opacidade 0) e de baixo para cima (trasnlateY). */
+@keyframes fadeup {
+    0% {
+        opacity: 0; /* Totalmente invisível */
+        transform: translateY(40px); /* 40px empurrado para baixo*/
+    }
+    100% {
+        opacity: 1; /* Totalmente visível */
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+
+
+
+/* Efeito de Esponja (Squish / Bounce). usa scaleX e Y para esticar e achatar como uma borracha. 
+[MDN Reference: transform, scale()] */
+@keyframes sponge {
+    0 {transform: translateY(0) scale(1);}
+    30 {transform: translateY(0) scaleX(1.02) scaleY(0.96);}
+    50 {transform: translateY(0) scaleX(0.98) scaleY(1.02);}
+    70 {transform: translateY(0) scaleX(1.01) scaleY(0.99);}
+    100 {transform: translateY(0) scale(1);}
+}
+
+
+
+/* A pseudo-classe: hover ativa os estilos apenas quando o cursor do mouse está por cima.
+[MDN Reference: :hover*/
+section: hover {
+    animation: sponge 0.5s ease-out:
+}
+
+
+
+/* Agrupamento de formulários */
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    /* Transition cria a suavidade na mudança de estado (ex: ao passar o mouse depois)
+    MDN Reference: transition] */
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: var(--primary); /* Acende a borda com nossa cor azul */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); /* Acende a sombra neon */
+}
+
+/* Legenda presa a borda do fieldset */
+legend {
+    background: var(--bg-color);
+    color: var(--primary);
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+
+
+/* Estilização de múltiplos inputs ao mesmo tempo. Separamos por virgula.
+[MDN Reference: Attribute selectors (ex: [type="text")]) */
+/* Foi a mudanças das caixas que podem ser preenchidas*/
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], select, textarea {
+    width: 100%; /* Força a ocupar a linha toda */
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif , sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+} 
+
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* mudança dos quadros da questão 5*/
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: var(--primary);
+}
+
+
+
+/* ================================================================================================================================= 
+AULA: ALINHAMENTO DE IMAGENS E MOLDURAS
+================================================================================================================================== */
+
+figure {
+    /* display: flex transforma a figura num container poderoso para alinhar coisas.
+    MDN Reference: CSS Flexible Box Layout (Flexbox)] */
+    display: flex;
+    flex-direction: column /* Empilha os filhos (imagem e legenda) um em cima do outro */;
+    align-items: center; /* Centraliza no eixo cruzado (meio horizontal) */
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)); /* Fundo em gradiente suave */
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+
+/* Legenda da imagem que esta na figura da Questão 8 */
+figcaption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Cor um pouco mais suave que o branco puro */
+    font-size: italic   ;
+}
+
+
+/* Botões */
+button {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para uma 'mãozinha' indicando que é clicável */
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.02); /* Botão cresce 2% quando passamos o mouse */;
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4); /* Proteja um neon por baixo */
+}
+
+
+
+/* ====================================================================================================================================
+AULA: TABELAS MODERNAS (EFEITO ZEBRA, HOVER E GLASSMORPHISM)
+===================================================================================================================================== */
+/* Alterações da questão 9 */
+table {
+    width: 100;
+    /* border-collapse junta as bordas das células para formar uma linha só.
+    [MDN Reference: border-collapse] */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(15, 23, 42, 0.6); /* Fundo escuro com efeito vidro */
+    border-radius: 12px;
+    /* O overflow escondido corta tudo que sair do limite arredondado do fundo */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+
+/* Dados gerais da tabela e cabeçalhos */
+th, td {
+    padding: 18px 15px; /* Mais espaço interno (respiro) para a tabela não parecer apaertada*/
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória bem sutil */
+    transition: all 0.3s ease; /* Prepara para animações suaves */
+}
+
+
+/* Cabeçalhos em destaque */
+th {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3)); /* Gradiente na linha do título */ 
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6); /* Brilho neon no cabeçalho */
+}
+
+
+
+/* Pseudo-classe :nth-child(). Seleciona elementos com base em uma formula matematica!
+Aqui 
+"even" = pinta as linhas pares. 
+"odd" = pintaria as impares.
+Excelente para criar efeito Zebra.
+[MDN Reference: nth-child] */
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+
+/* Destaca a linha inteira da tabela ao colocar o mouse */
+tbody tr:hover {
+    background-color: rgba(59, 130, 246, 0.15); /* Fundo azul translucido */
+}
+
+
+/* Essa regra diz: Quando o mouse passar na linha (tr:hover), mude a tabela (td) que esta DENTRO dela. */
+tbody tr:hover td {
+    color: #fff;
+    text-shadow: 0 0 8px var(--primary);
+    padding-left: 20px; /* Aumenta a distancia da esquerda, criando efeito de escorregar. */
+}
+
+
+/* Configurando o rodapé especifico da tabela */
+tfoot th {
+    text-align: center; /* Alinhamento do texto */
+    font-weight: 800;
+    color: var(--accent); /* Usa a cor roxa (accent) do nosso tema */
+    background: rgba(15, 23, 42, 0.9);
+    border-bottom: none;
+    text-transform: uppercase; /* texto passa para maiuscula */
+}
+
+
+
+/* ====================================================================================================================================
+AULA: TIPOGRAFIA E TEXTOS DINAMICOS (EFEITO NEON/GLASS)
+===================================================================================================================================== */
+
+/* Seleciona APENAS o h2 que tenha o ID 's01'.
+nesse comando mudou o escrito SOBRE ESSE QUIZZ
+[MDN Reference: id selectors (#)] */
+h2#s01 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--accent), 0 0 20px var(--primary);
+}
+
+
+/* Seleciona paragrafos que possuam a classe 'texto-indrodução'.
+nesse comando esta mudando o texto da indrodução no começo do site.
+[MDN Reference: Class selectors (.)] */
+p.texto-introducao {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #cbd5e1; /* Cor de texto mais suave para leitura no fundo escuro */
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.6); /* Fundo escuro translúcido */
+    border-left: 6px solid var(--primary); /* Barra lateral Azul vibrante */
+    border-radius: 0 15px 15px 0;
+    /* A palavra 'inset' joga a sombra para o lado de DENTRO do objeto */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* O lado dinamico: Efeito de Cartão 3D que salta para a direita.
+esse efeito, quando passa o mouse por cima o quadro chega um pouco para o lado direito */
+p.texto-introducao:hover {
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateX(10px);
+    border-left-color: var(--accent); /* Muda a borda de azul para roxo */
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* Magia do CSS: O pseudo-elemento ::first-letter.
+Ele localiza matematicamente a primeira letra do paragrafo, não importa qual seja.
+[MDN Reference: ::first-letter] */
+p.texto.introducao::first-letter {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary);
+    float: left; /* Faz o restante do texto "contornar" a letra que flutua a esquerda */
+    margin-right: 12px;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8); /* Faz a primeira letra parecer um neon aceso */
+}
